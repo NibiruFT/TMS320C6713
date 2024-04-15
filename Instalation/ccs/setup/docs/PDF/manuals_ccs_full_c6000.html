@@ -1,0 +1,902 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+	
+	<title></title>	
+	    <LINK REL="StyleSheet" HREF="ccsmanualsindex.css"
+      TYPE="text/css" MEDIA="screen">
+</head>
+
+<body>
+<IMG height=33 alt="Texas Instruments" src="logocorp.gif" 
+width=600 border=0>  <br /><br /> <br /> 
+
+<table class="links">
+<tr>
+<th width="50%"class="standardlinkcategory">Software</th>
+<th  width="50%"class="standardlinkcategory"  >Hardware </th> 
+</tr>
+<tr >
+
+
+<td border="0" width="50%" rowspan="3">
+
+
+<div class="toc">
+
+
+ <h4>IDE  </h4> <a href="spru509e.pdf">Getting Started</a>, <a href="spraa07.pdf">What's New</a> <br /> 
+<h4>Tools:</h4> 
+<p class="indentlinks"><a href="#6xsimulator">Simulator </a> </p>
+ <p class="indentlinks"><a href="#6xassembly">Assembly </a> </p>
+  <p class="indentlinks">  <a href="#6xcompiler">Compiler</a> </p>
+   <!--  deleted for now <p class="indentlinks">  <a href="#6xact">Application Code Tuning </a> </p> -->
+
+	
+			  
+<h4>Programming </h4> 
+<p class="indentlinks"><a href="#6xprogramguide">Programmer's Guide</a> </p> 
+<p class="indentlinks"><a href="#6xdspbios">DSP/BIOS</a></p>  
+<p class="indentlinks"> <a href="#6xfoundation">Foundation Software (CSL, BSL, IMGLIB, DSPLIB) </a>  </p>
+<p class="indentlinks"><a href="dsp_algorithm_standard.html">TMS320 DSP Algorithm Standard Documentation</a></p>
+
+
+</div>
+</td>
+
+<td width="50%">
+
+
+<div class="toc">
+        <h4><a="#overview">GENERAL: </h4>
+        <p class="indentlinks">	<a href="#6xoverview">Peripherals Overview </a></p>
+		  <p class="indentlinks"> <a href="#6xcpu">CPU</a>	</p>
+   <p class="indentlinks">  <a href="#6xevm">EVM</a> &amp; <a href="#6xdsk">DSK</a> </p>
+<h4>Specific Peripherals: </h4> 
+
+		  <p class="indentlinks">
+		  	 <a href="#6xdma">DMA</a>
+			  <a href="#6xedma">EDMA<a/>
+			 	 </a><a href="#6xemac">EMAC </a>
+			 <a href="#6xemif">EMIF</a>
+			
+			 <a href="#6xgpio">GPIO </a>
+			 		<a href="#6xhpi">HPI</a>
+			 	<a href="#6xi2c">I2C </a>
+			
+			<a href="#6xjtag">JTAG </a>
+	
+		 <a href="#6xmcasp">McASP<a/>
+			</a><a href="#6xmcbsp">MCBSP</a>
+				 <a href="#6xpci">PCI </a>
+			<a href="#6xpll">PLL</a>
+
+			 <a href="#6xtcp">TCP</a>
+			 		 <a href="#6xtimer">TIMER</a>
+				<a href="#6xutopia">UTOPIA</a>
+					<a href="#6xvic">VIC </a>
+					 <a href="#6xvcp">VCP </a> 
+		
+			 <a href="#6xxbus">XBUS </a>
+		</p>
+			
+
+
+</div>
+
+</td> </tr>
+<tr>
+<th width="50%"class="standardlinkcategory">Miscellaneous</th>
+
+</tr>
+
+<tr >
+
+<td width="50%">
+
+
+<div class="toc">
+
+
+<p>Can't find the document or 
+information you need?<A 
+href="#howtofind">Click here</A>. </p>
+<p><strong>Find the <A 
+href="http://www.ti.com/sc/docs/psheets/manuals.htm">latest user guides</A> at ti.com</strong></p>
+
+<p>View <a href="http://www.ti.com/ccstudiodemos"> Multimedia Demos about Code Composer Studio IDE Features </a></p>
+
+<p> Local Manuals for <a href="manuals_ccs_full_c2000.html">C2000</a>, <a href="manuals_ccs_full_c5000.html">C5000</a>, <!-- <a href="manuals_ccs_full_c6000.html">C6000</a>. --> <a href="manuals_ccs_full_tms470.html">TMS470</a>  </p>
+
+</div>
+
+</td>
+
+
+</tr>
+
+
+
+
+
+<!--  end links  table  -->
+</table>
+
+
+<!--  begin 6000 hardware main table  -->
+
+
+<table>
+
+
+<tr >
+<td class="navystrip" colspan="3">Software</td>
+</tr>
+<tr><a name id="6xgeneral"></a>
+<td class="graystrip" colspan="3">
+
+IDE (Integrated Development Environment)</td>
+</tr>
+
+
+
+<!-- <tr>
+<td width="8%">		   
+<a name id=""></a>
+<a href="spraa07.pdf">SPRAA07</a> 
+</td>
+<td width="35%">What's New in Code Composer Studio&#8482; Development Tools v3.0</td>
+<td width="45%">Describes new features and changes from the previous release. 
+ </td>
+</tr>
+ -->
+<tr>
+<td width="8%">		   
+
+<a href="spru509f.pdf">SPRU509</a> 
+</td>
+<td width="35%">Code Composer Studio&#8482; v3.1 IDE Getting Started Guide</td>
+<td width="45%">Provides basic procedures in program development flow order to help you begin programming. 
+Online version of printed manual.  100+ pages. 
+ </td>
+
+</tr>
+
+<!-- undocumented feature for 3.1 <tr>
+<td width="8%">		   
+<a href="spru007e.pdf">SPRU007</a> 
+</td>
+<td width="35%">TMS320 DSP/BIOS TextConf User's Guide</td>
+<td width="45%"> This guide compares the two methods for configuring DSP/BIOS programs, details about using DSP/BIOS TextConf and information about the Target Content Object Model.  </td>
+</tr> -->
+
+
+<tr>
+<td width="8%">		   
+
+<a href="spraa08.pdf">SPRAA08</a> 
+</td>
+<td width="35%">Code Composer Studio&#8482; IDE v3. White Paper </td>
+<td width="45%"> This July 2004 version gives a readable high-level overview of the IDE's features. For more detailed and current information, see 
+the Getting Started Guide above.  </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a name id=""></a>
+<a href="spraa74a.pdf">SPRAA74</a> 
+</td>
+<td width="35%">Creating Device Initialization GEL Files 
+</td>
+<td width="45%">How Code Composer Studio&#8482;  IDE uses the startup GEL files and how to properly write such files.
+ </td>
+</tr>
+
+<tr>
+
+<td><a href="spru713a.pdf">SPRU713</a></td>
+<td> Rewind User's Guide 
+</td>
+<td>
+This user guide describes a special feature supported by C55x/C6xx simulators in
+the Code Composer Studio (CCS) IDE  environment. The feature is called
+Rewind. Using this feature, you can view past history of application being
+executed on the simulator, reducing the time to debug the application.
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a name id=""></a>
+<a href="spru623d.pdf">SPRU623</a> 
+</td>
+<td width="35%">Analysis Toolkit v1.3 for Code Composer Studio IDE
+</td>
+<td width="45%">The Analysis Toolkit (ATK)  lets you visualize source line coverage information. 
+It also provides exclusive
+profile data for individual functions and source line profile data for individual
+lines of code for each function.  
+ </td>
+</tr>
+
+
+<tr>
+<td class="graystrip" colspan="3">Tools </td>
+</tr>
+
+<tr>
+<a name id="6xsimulator"></a>
+<td><a href="spru600f.pdf">SPRU600</a></td>
+<td> TMS320C6000 Instruction Set Simulator Technical Review 
+</td>
+<td>
+The TMS320C6000™ Instruction Set Simulator, available within the Code Composer Studio for TMS320C6000 IDE, simulates the C62X, C64X, and C67X family of devices. 
+ </td>
+</tr>
+
+
+<tr>
+<a name id=""></a>
+<td><a href="spraa73.pdf">SPRAA73</a></td>
+<td> Simulating RF3 to Leverage Code Tuning Capabilities
+</td>
+<td>
+This application note
+provides an example using the Reference Frameworks Level 3 application and the 'C6416
+device cycle accurate simulator. 
+ </td>
+</tr>
+
+
+<tr>
+<a name id="6xassembly"></a>
+<td><a href="spru186n.pdf">SPRU186</a></td>
+<td> TMS320C6000 Assembly Language Tools User's Guide 
+  </td>
+<td>Assembly language tools designed for the TMS320C6000 32-bit devices: 
+- Assembler 
+- Archiver 
+- Linker 
+- Cross-reference lister  
+- Absolute lister 
+- Hex conversion utility 
+</td>
+</tr>
+
+<tr>
+
+<td>
+<a name id="#6xfastrts"></a>
+<a href="spru100a.pdf">SPRU100</a></td>
+<td> TMS320C67x FastFTS Library Programmer's Reference 
+</td>
+<td> Describes the Fast Runtime Support Library for C67x devices. </td> 
+</tr>
+
+
+<tr><a name id="6xcompiler"></a>
+<td width="8%">		   
+
+<a href="spru187l.pdf">SPRU187</a> 
+</td>
+<td width="35%">TMS320C6000 Optimizing Compiler User's Guide 
+</td>
+<td width="45%">Compiler tools designed for the TMS320C6000 32-bit devices: 
+- Parser 
+- Optimizer 
+- Interlist utility 
+- Assembly optimizer 
+- Library-build utility
+
+ </td>
+</tr>
+
+<!-- <tr><a name id="6xact"></a>
+<td width="8%">		   
+
+<a href="spraa14.pdf">SPRAA14</a> 
+</td>
+<td width="35%">Introduction to Compiler Consultant  
+</td>
+<td width="45%">How to optimize an application using  Compiler Consultant (an ACT tool). Includes an MP3 decoder example. 
+ </td>
+</tr> -->
+
+
+<tr>
+<td class="graystrip" colspan="3">Programming </td>
+</tr>
+
+
+<tr>
+<td width="8%">		   
+<a name id="6xprogramguide"></a>
+<a href="spru198g.pdf">SPRU198</a> 
+</td>
+<td width="35%">TMS320C6000 Programmer's Guide
+</td>
+<td width="45%">How to program TMS320C6000 digital signal processor (DSP) devices.
+ </td>
+</tr>
+
+
+
+
+
+
+<tr><a name id="6xdspbios"></a>
+<td class="graystrip" colspan="3">DSP/BIOS </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+
+<a href="spru423d.pdf">SPRU423</a> 
+</td>
+<td width="35%">DSP/BIOS User's Guide</td>
+<td width="45%">How to use DSP/BIOS for embedded real-time DSP applications.
+ </td>
+</tr>
+
+<!-- undocumented feature for 3.1 <tr>
+<td width="8%">		   
+<a href="spru007d.pdf">SPRU007</a> 
+</td>
+<td width="35%">DSP/BIOS TextConf User's Guide </td>
+<td width="45%">This guide compares the two methods for configuring DSP/BIOS programs, details about using DSP/BIOS TextConf, and information about the Target Content Object Model.
+
+ </td>
+</tr> -->
+
+
+
+<tr>
+<td width="8%">		   
+<a name id=""></a>
+<a href="spru403g.pdf">SPRU403</a> 
+</td>
+<td width="35%">TMS320C6000 DSP/BIOS Application Programming Interface (API) Reference Guide
+</td>
+<td width="45%">Reference information about the DSP/BIOS API.
+
+ </td>
+</tr>
+
+
+
+
+
+<tr><a name id="6xfoundation"></a>
+<td class="graystrip" colspan="3">Foundation Software  </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru401i.pdf">SPRU401</a> 
+</td>
+<td width="35%">
+TMS320C6000 Chip Support Library API Reference Guide
+</td>
+    <td width="45%">The TMS320C6000™ Chip Support Library (CSL) is a set of application 
+      programming interfaces (APIs) used to configure and control all on-chip 
+      peripherals. It is intended to make it easier for developers by eliminating 
+      much of the tedious work usually needed to get algorithms up and running 
+      in a real system. </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru432b.pdf">SPRU432</a> 
+</td>
+<td width="35%">
+TMS320C6000 DSK Board Support Library API User's Guide
+</td>
+<td width="45%">
+The TMS320C6000&#8482; DSK Board Support Library (BSL) is a set of application programming interfaces (APIs) used to configure and control all on-board devices. It is intended to make it easier for developers by eliminating much of the tedious grunt-work usually needed to get algorithms up and running in a real system.
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru400a.pdf">SPRU400</a> 
+</td>
+<td width="35%">
+TMS320C62x Image/Video Library Programmer's Reference 
+</td>
+<td width="45%">
+The IMGLIB is a collection of 22 high-level optimized DSP functions for the TMS320C62x device. This source code library includes C-callable functions (ANSI-C language compatible) for general-purpose imaging functions that include compression, video processing, machine vision, and medical imaging type applications.
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru402a.pdf">SPRU402</a> 
+</td>
+<td width="35%">
+TMS320C62x DSP Library Programmer's Reference
+</td>
+<td width="45%">
+The DSPLIB is a collection of 32 high-level optimized DSP functions for the TMS320C62x device. This source code library includes C-callable functions (ANSI-C language compatible) for general signal processing math and vector functions.
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru565a.pdf">SPRU565</a> 
+</td>
+<td width="35%">
+TMS320C64x DSP Library Programmer's Reference 
+</td>
+    <td width="45%"> The DSPLIB is a collection of 39 high-level optimized DSP functions 
+      for the TMS320C64x device. This source code library includes C-callable 
+      functions (ANSI-C language compatible) for general signal processing math 
+      and vector functions. </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru023a.pdf">SPRU023</a> 
+</td>
+<td width="35%">
+TMS320C64x Image/Video Processing Library Programmer’s Reference
+</td>
+    <td width="45%"> TMS320C64x Image/Video Library (IMGLIB) is a collection of 
+      24 high-level optimized DSP functions for the TMS320C64x device. This source 
+      code library includes C-callable functions (ANSI–C language compatible) 
+      for general-purpose imaging functions that include compression, video processing, 
+      machine vision, and medical imaging applications. </td>
+</tr>
+
+<tr> 
+    <td colspan="3">&nbsp;&nbsp;&nbsp;<em>See also: <a href="#6xfastrts">FastRTS Library Programmer's Reference</a> and <a href="#6xperilib">
+	TMS320C62x Peripheral Support Library Programmer's Reference </a></em></td>
+  </tr>
+
+
+</table>
+
+<br />
+
+
+<table>
+
+
+<tr >
+<td class="navystrip" colspan="3">
+<a name id="6xgeneral"></a><a name id="#6xoverview"></a>Hardware</td>
+</tr>
+<tr>
+    <td class="graystrip" colspan="3"><a name id="#6xgeneral"></a> General</td>
+</tr>
+
+
+
+<tr>
+<td width="8%">		   
+
+<a href="spru190d.pdf">SPRU190</a> 
+</td>
+<td width="35%">TMS320C6000 DSP Peripherals Overview Reference Guide
+</td>
+<td width="45%">The on-chip peripherals of the TMS320C6201/6701 digital signal processors. 
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a name id="#6xperilib"></a>
+<a href="spru273b.pdf">SPRU273</a> 
+</td>
+<td width="35%">TMS320C62x Peripheral Support Library Programmer's Reference
+
+</td>
+<td width="45%">
+This manual describes the TMS320C6000&#8482; peripheral support library of functions and macros. This library consists of low-level macros and functions that initialize and control the on-chip peripherals of the TMS320C6x digital signal processor(DSP). This document serves as a reference for the C programmer in creating code for the TMS320C6x.
+
+ </td>
+</tr>
+
+<tr>
+<td class="graystrip" colspan="3"><a name id="#6xcpu"></a>
+
+CPU </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a name id="6xdsk"></a>
+<a href="spru189f.pdf">SPRU189</a> 
+</td>
+<td width="35%">TMS320C6000 CPU and Instruction Set Reference Guide
+
+</td>
+<td width="45%">The CPU architecture, pipeline, instruction set, and interrupts for the TMS320C6000 digital signal
+ processors. See also the manual update (SPRZ168) listed below. 
+
+ </td>
+</tr>
+
+
+<tr>
+<td width="8%">		   
+<a href="sprz168e.pdf">SPRZ168</a> 
+</td>
+<td width="35%">Manual Update to TMS320C6000 CPU and Instruction Set Reference Guide
+
+</td>
+<td width="45%">This Manual Update Sheet  describes changes for the TMS320C6000 CPU and Instruction Set
+Reference Guide (see above).
+
+ </td>
+</tr>
+
+
+<tr>
+<td width="8%">		   
+<a href="spru656a.pdf">SPRU656</a> 
+</td>
+<td width="35%">TMS320C6000 DSP Cache User's Guide
+</td>
+<td width="45%">This explains the fundamentals of memory caches and describes how to efficiently use the TMS320C6000 DSP two-level cache-based memory architecture. It shows how to maintain coherence with external memory; how to use DMA to reduce memory latencies, and how to optimize your code to improve code efficiency. 
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru642.pdf">SPRU642</a> 
+</td>
+<td width="35%">TMS320C620x/C670x DSP Boot Modes and Configuration Reference Guide
+</td>
+<td width="45%"> Describes the boot modes and device configuration used by 620x/670x DSP's. Describes the available boot processes and explains how the device is used. 
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru646a.pdf">SPRU646</a> 
+</td>
+<td width="35%">TMS320C6000 DSP Interrupt Selector Reference Guide </td>
+<td width="45%"> Describes the interrupt selector, interrupt selector registers, and the available interrupts in the DSP's of the C6000 family.  
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru728.pdf">SPRU728</a> 
+</td>
+<td width="35%">TMS320C6000 DSP Power-Down Logic and Modes Reference Guide </td>
+<td width="45%"> Describes the interrupt selector, interrupt selector registers, and the available interrupts in the DSP's of the C6000 family.  
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru609a.pdf">SPRU609</a> 
+</td>
+<td width="35%">TMS320C621x/C671x DSP Two-Level Memory Reference Guide 
+</td>
+<td width="45%">This explains the fundamentals of memory caches and describes how to efficiently use the TMS320C6000 DSP two-level cache-based memory architecture. Describes the different kinds of cache and how to configure L2 to allow for various amounts of cache and SRAM. Discusses the two level internal memory of C621x/C671x. 
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru610.pdf">SPRU610</a> 
+</td>
+<td width="35%">TMS320C64x DSP Two-Level Internal Memory Reference Guide  
+</td>
+<td width="45%">
+This document discusses the two-level internal memory used for program and data in the TMS320C64x digital signal processors (DSPs) of the TMS320C6000 DSP family. The first-level program cache is designated L1P and the first-level data cache is designated L1D. Both the program and data memory share the second-level memory, designated L2. L2 is configurable, allowing for various amounts of cache and SRAM. 
+ </td>
+</tr>
+
+
+
+<tr>
+<td class="graystrip" colspan="3"><a name id="#6xevm"></a><a name id="6xdsk"></a>
+
+Evaluation Modules (EVM)</td>
+</tr>
+
+
+
+<tr>
+<td width="8%"><a name id="6xevm"></a>		   
+<a href="spru305.pdf">SPRU305</a> 
+</td>
+<td width="35%">TMS320C6201/6701 Evaluation Module Technical Reference 
+</td>
+<td width="45%">Technical information describing the TMS320C6x evaluation module functionality including: 
+- the theory of operation for the 'C6x EVM hardware 
+- host software utilities 
+- DSP host support software. </td> 
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru269f.pdf">SPRU269</a> 
+</td>
+<td width="35%">TMS320C6201/6701 Evaluation Module User's Guide
+</td>
+<td width="45%">How to install and operate the TMS320C6x evaluation module including: 
+- a high level overview of the 'C6xEVM hardware and support software 
+- getting started 
+- instructions for running the EVM confidence test 
+- 'C6x EVM host software utilities </td> </tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru308.pdf">SPRU308</a> 
+</td>
+<td width="35%">TMS320C6x Multichannel Evaluation Module Reference Guide </td>
+<td width="45%">
+Technical information describing the TMS320C6x multichannel evaluation module functionality including: 
+- the theory of operation for the C6x McEVM hardware 
+- host software utilities 
+- DSP support software
+</td> </tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru285a.pdf">SPRU285</a> 
+</td>
+<td width="35%">TMS320C6x Multichannel Evaluation Module User's Guide 
+</td>
+    <td width="45%"> How to install and operate the TMS320C62x multichannel evaluation 
+      module (McEVM) including: - support software documentation - API references 
+      - technical reference material for the C62xMcEVM </td>
+  </tr>
+
+<tr>
+    <td class="graystrip" colspan="3"><a name id="#6xgeneral"></a> Specific Peripherals</td>
+</tr>
+
+<tr>
+<td width="8%"><a name id="6xdma"></a>		   
+<a href="spru577.pdf">SPRU577</a> 
+</td>
+<td width="35%">TMS320C620x/C670x  DSP Program and Data Memory Controller/Direct Memory Access (DMA) Controller Reference Guide  
+</td>
+<td width="45%"> This document describes the program memory modes, program and data memory organizations, and the program and data memory controller in the TMS320C620x/C670x digital signal processors (DSPs) of the TMS320C6000 DSP family. This document also describes the operation of the direct memory access (DMA) controller and the DMA and CPU data access performance to the internal memory, the peripherals, and the external memory.
+</td> </tr>
+
+<tr>
+<td width="8%"><a name id="6xemif"></a>		   
+<a href="spru266a.pdf">SPRU266</a> 
+</td>
+<td width="35%">TMS320C6000 DSP External Memory Interface (EMIF) Reference Guide 
+</td>
+<td width="45%">This document describes the operation of the external memory interface (EMIF) in the digital signal processors (DSPs) of the TMS320C6000 DSP family.
+</td> </tr>
+
+
+<tr>
+<td width="8%"><a name id="6xedma"></a>		   
+<a href="spru234.pdf">SPRU234</a> 
+</td>
+<td width="35%">TMS320C6000 DSP Enhanced Direct Memory Access (EDMA) Controller Reference Guide 
+</td>
+<td width="45%"> This document describes the operation of the EDMA controller in the digital signal processors (DSPs) of the TMS320C6000 DSP family. This document also describes the quick DMA (QDMA) used for fast data requests by the CPU.
+</td> </tr>
+
+<tr>
+<td width="8%"><a name id="6xemac"></a>		   
+<a href="spru628a.pdf">SPRU628</a> 
+</td>
+<td width="35%">TMS320C6000 DSP Ethernet Media Access Controller (EMAC)/Management Data Input/Output (MDIO) Module Reference Guide 
+</td>
+<td width="45%"> This document describes the EMAC and MDIO module in the digital signal processors (DSPs) of the TMS320C6000 DSP family. The EMAC controls the flow of packet data from the DSP to the PHY. The MDIO module controls PHY configuration and status monitoring.  
+</td> </tr>
+
+<tr>
+<td width="8%"><a name id="6xgpio"></a>		   
+<a href="spru584a.pdf">SPRU584</a> 
+</td>
+<td width="35%">TMS320C6000 DSP General-Purpose Input/Output (GPIO) Reference Guide  
+</td>
+<td width="45%"> This document describes the general-purpose input/output (GPIO) peripheral in the digital signal processors (DSPs) of the TMS320C6000 DSP family.
+</td> </tr>
+
+<tr>
+<td width="8%"><a name id="6xhpi"></a>		   
+<a href="spru578A.pdf">SPRU578</a> 
+</td>
+<td width="35%">TMS320C6000 DSP Host Port Interface (HPI) Reference Guide 
+</td>
+<td width="45%"> This document describes the host-port interface (HPI) in the digital signal processors (DSPs) of the TMS320C6000 DSP family that external processors use to access the memory space.
+</td> </tr>
+
+<tr>
+<td width="8%"><a name id="6xi2c"></a>		   
+<a href="spru175a.pdf">SPRU175</a> 
+</td>
+<td width="35%">TMS320C6000  DSP Inter-Integrated Circuit (I2C) Module Reference Guide  
+</td>
+<td width="45%"> This document describes the I2C module that provides an interface between a TMS320C6000 digital signal processor (DSP) and any I2C-bus-compatible device that connects by way of an I2C bus. External components attached to this 2-wire serial bus can transmit/receive up to 8-bit data to/from the C6000 DSP through the I2C module. This document assumes the reader is familiar with the I2C-bus specification.
+</td> </tr>
+
+<tr>
+<td width="8%"><a name id="6xjtag"></a>		   
+<a href="spru641.pdf">SPRU641</a> 
+</td>
+<td width="35%">TMS320C6000 DSP Designing for JTAG Emulation Reference Guide
+</td>
+<td width="45%">This document assists you in meeting the design requirements of the XDS510 emulator with respect to JTAG designs and discusses the XDS510 cable. This cable supports both standard 3-volt and 5-volt target system power inputs.
+</td> </tr>
+
+
+<tr>
+<td width="8%"><a name id="6xmcasp"></a>		   
+<a href="spru041c.pdf">SPRU041</a> 
+</td>
+<td width="35%">TMS320C6000 DSP Multichannel Audio Serial Port (McASP) Reference Guide 
+</td>
+<td width="45%"> This document describes the multichannel audio serial port (McASP) in the digital signal processors (DSPs) of the TMS320C6000™ DSP family. The McASP functions as a general-purpose audio serial port optimized for the needs of multichannel audio applications. The McASP is useful for time-division multiplexed (TDM) stream, Inter-Integrated Sound (I2S) protocols, and intercomponent digital audio interface transmission (DIT). 
+</td> </tr>
+
+<tr>
+<td width="8%"><a name id="6xmcbsp"></a>		   
+<a href="spru580c.pdf">SPRU580</a> 
+</td>
+<td width="35%">TMS320C6000  DSP Multichannel Buffered Serial Port (McBSP) Reference Guide 
+</td>
+<td width="45%"> This document describes the operation of the multichannel buffered serial port (McBSP) in the digital signal processors (DSPs) of the TMS320C6000 DSP family.
+</td> </tr>
+
+<tr>
+<td width="8%"><a name id="6xpci"></a>		   
+<a href="spru581a.pdf">SPRU581</a> 
+</td>
+<td width="35%">TMS320C6000 DSP Peripheral Component Interconnect (PCI) Reference Guide 
+</td>
+<td width="45%"> This document describes the peripheral component interconnect (PCI) port in the digital signal processors (DSPs) of the TMS320C6000 DSP family. The PCI port supports connection of the DSP to a PCI host via the integrated PCI master/slave bus interface.
+</td> </tr>
+
+
+<tr>
+<td width="8%"><a name id="6xpll"></a>		   
+<a href="spru233b.pdf">SPRU233</a> 
+</td>
+<td width="35%">TMS320C6000  DSP Software-Programmable Phase-Locked Loop (PLL) Controller Reference Guide  
+</td>
+<td width="45%"> This document describes the operation of the software-programmable phase-locked loop (PLL) controller in the digital signal processors (DSPs) of the TMS320C6000 DSP family.
+</td> </tr>
+
+
+
+<tr>
+<td width="8%"><a name id="6xtcp"></a>		   
+<a href="spru534a.pdf">SPRU534</a> 
+</td>
+<td width="35%">TMS320C6000 DSP Turbo-Decoder Coprocessor (TCP) Reference Guide 
+</td>
+<td width="45%"> This document describes the operation and programming of the turbo decoder coprocessor (TCP) embedded in the TMS320C6416 digital signal processors (DSPs) of the MS320C6000 DSP family. Channel decoding of high bit-rate data channels found in third generation cellular standards requires decoding of turbo-encoded data. The TCP embedded in the C6416 DSP has been designed to perform this operation for IS2000 and 3GPP wireless standards.
+</td> </tr>
+
+<tr>
+<td width="8%"><a name id="6xtimer"></a>		   
+<a href="spru582a.pdf">SPRU582</a> 
+</td>
+<td width="35%">TMS320C6000 DSP 32-Bit Timer Reference Guide
+</td>
+<td width="45%"> This document describes the 32-bit timer in the digital signal processors (DSPs) of the TMS320C6000 DSP family. The C6000 DSP device has 32-bit general-purpose timers that can be used to: time events, count events, generate pulses, interrupt the CPU and send synchronization events to the DMA.
+</td> </tr>
+
+
+<tr>
+<td width="8%"><a name id="6xutopia"></a>		   
+<a href="spru583.pdf">SPRU583</a> 
+</td>
+<td width="35%">TMS320C64x DSP Universal Test and Operations PHY Interface for ATM(UTOPIA) Reference Guide
+</td>
+<td width="45%"> This document describes the universal test and operations PHY interface for asynchronous transfer mode (UTOPIA) in the TMS320C64x digital signal processors (DSPs) of the TMS320C6000 DSP family. The UTOPIA is an ATM controller (ATMC) slave device that interfaces to a master ATM controller. The UTOPIA port conforms to the ATM Forum standard specification af-phy-0039.000. Specifically, this interface supports the UTOPIA Level 2 interface that allows 8-bit slave operation up to 50 MHz for both transmit and receive operations.
+</td> </tr>
+
+<tr>
+<td width="8%"><a name id="6xvic"></a>		   
+<a href="spru629a.pdf">SPRU629</a> 
+</td>
+<td width="35%">TMS320C64x DSP Video Port/VCXO Interpolated Control (VIC) Port Reference Guide   
+</td>
+<td width="45%">This document describes the video port and VCXO interpolated control (VIC) port in the TMS320C64x digital signal processors (DSPs) of the TMS320C6000 DSP family. The video port peripheral can operate as a video capture port, video display port, or transport stream interface (TSI) capture port. The VIC port provides single-bit interpolated VCXO control with resolution from 9 bits to up to 16 bits.
+</td> </tr>
+
+
+
+
+<tr>
+<td width="8%"><a name id="6xvcp"></a>		   
+<a href="spru533c.pdf">SPRU533</a> 
+</td>
+<td width="35%">TMS320C6000 DSP Viterbi-Decoder Coprocessor (VCP) Reference Guide 
+</td>
+<td width="45%"> This document describes the operation and programming of the Viterbi-decoder coprocessor (VCP) embedded in the TMS320C6416 digital signal processors (DSPs) of the TMS320C6000 DSP family. Channel decoding of voice and low bit-rate data channels found in third generation cellular standards requires decoding of convolutional encoded data. The VCP embedded in the C6416 DSP has been designed to perform this operation for IS2000 and 3GPP wireless standards.
+</td> </tr>
+
+
+
+<tr>
+<td width="8%"><a name id="6xxbus"></a>		   
+<a href="spru579a.pdf">SPRU579</a> 
+</td>
+<td width="35%">TMS320C6000 DSP Expansion Bus (XBUS) Reference Guide 
+</td>
+<td width="45%"> This document describes the expansion bus (XBUS) used by the CPU to access off-chip peripherals, FIFOs, and peripheral component interconnect (PCI) interface devices in the TMS320C62x digital signal processors (DSPs) of the TMS320C6000 DSP family.
+
+</td> </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</table>
+
+<a name id="howtofind"></a>		  
+<H3>Tips for Finding Documents and Related Information</H3>
+<P>The list of documents on this page are PDF files found locally in your 
+documentation directory (usually at <STRONG>C:\CCStudio\docs\pdf</STRONG> ). If 
+for some reason, a link calls up an error message, it may be because the PDF 
+file is not there or mislabeled. You have two options: 
+<OL>
+  <LI>copy the PDF file from the install CD (i.e., 
+  <STRONG>C:\CCSTudio\docs\pdf</STRONG>). 
+  <LI>go to the <A 
+  href="http://www.dspvillage.com/">http://www.dspvillage.com/</A> and enter 
+  your search term in the Keyword field on the top right corner of the page. 
+  Entering the document number (i.e., <EM>SPRA601</EM> ) tends to bring the most 
+  accurate results, although if that fails, you may need to enter the Title or 
+  keywords. Many PDF document have alphabet letters to indicate versions. So 
+  SPRU018D is more recent than SPRU018C. </LI></OL>
+<P>If you're not sure what document you need and just want to browse through a 
+list, you can find on the ti.com site a <A 
+href="http://www.ti.com/sc/docs/psheets/manuals.htm">list of online manuals</A>. 
+</P>
+<p>Adobe Acrobat Reader 6.0 includes several features to improve the overall reading experience for longer documents(including  better search and indexing capability). If you haven't upgraded already, you should do so.
+</p>
+
+<P>Many of the PDF's linked on this page are quite lengthy, so it's quite 
+possible that the document encompasses many more topics than the title would 
+suggest. If you're looking for a specific keyword (like a function or plugin 
+tool), you can also click the <EM>Index</EM> or <EM>Search</EM> tab on the left 
+side of this help window. Often this can be the fastest way to find the 
+information you need. </P>
+<P>Finally, TI now has a <A 
+href="http://www-k.ext.ti.com/sc/technical-support/dsp-kbase">searchable DSP 
+knowledgebase </A>which often contains the most up-to-date information about 
+potential bugs and workarounds. Because the number of results may sometimes be 
+unwieldy, it's often helpful to filter results. For example, changing the 
+<STRONG>Document Type</STRONG> to "<EM>Frequently Asked Questions</EM>" will 
+exclude PDF's and show only questions and answers entered by support engineers. 
+If you have a general question about Code Composer Studio, you can narrow your 
+search by choosing the right DSP Platform (C5000, C6000, etc) but leaving the 
+default "<EM>Not answered</EM>" for <STRONG>Tool Type</STRONG>. At the time of 
+this writing, search results are NOT organized chronologically, so you may need 
+to be careful that what you are reading is in fact the most recent document. If 
+you simply wish to browse through all of the most recent user guides, you can go 
+<A href="http://www.ti.com/sc/docs/psheets/manuals.htm">here</A> </P>
+<H5>See also: </H5>
+<P><A 
+href="http://www-k.ext.ti.com/sc/technical-support/knowledgebase/dsp/dsp_help.htm">Solving 
+Problems with the DSP Knowledgeabase</A> </P>
+<P><FONT face=Arial,Helvetica><FONT size=-1>Copyright (c) 2005 Texas Instruments 
+Incorporated. All rights reserved.</FONT></FONT> </P></BODY></HTML>
+
+
+
+

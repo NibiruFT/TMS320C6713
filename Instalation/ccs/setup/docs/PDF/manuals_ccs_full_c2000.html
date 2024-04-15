@@ -1,0 +1,1185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+	
+	<title>Texas Instruments C2000  User Manuals </title>	
+	    <LINK REL="StyleSheet" HREF="ccsmanualsindex.css"
+      TYPE="text/css" MEDIA="screen">
+</head>
+
+<body>
+<IMG height=33 alt="Texas Instruments" src="logocorp.gif" 
+width=600 border=0>  <br /><br /> <br /> 
+
+<table class="links">
+<tr>
+    <th width="50%"class="standardlinkcategory">TMS320C28x Manuals</th>
+<th  width="50%"class="standardlinkcategory"  >TMS320C24x Manuals </th> 
+</tr>
+<tr >
+
+
+<td border="0" width="50%" >
+
+
+<div class="toc">
+
+
+
+ <p><a href="#general28x">General Manuals</a>: IDE Help, Getting Started, Migrating projects, General
+ </p>
+ <h4>TMS320C280x  Devices </h4> 
+<p class="indentlinks"><a href="#280">Instruction Set Reference Guide </a> </p>
+<p class="indentlinks"><a href="#28peripheral">DSP Peripheral Reference</a>  </p>
+<p class="indentlinks"><a href="#28software">Software Programming</a> (Assembly, API's, etc).   </p>
+<p class="indentlinks"><a href="#28applicationreports">Application Reports</a>  </p>
+
+ <h4>TMS320C281x  Devices </h4>: <a href="#281"> Migration, User Guides, Application Reports</a>
+ 
+
+
+ 
+
+
+
+
+
+</div>
+<!-- <div class="standardlinkcategory">TMS320C27xx Manuals</div>
+
+<p>These devices are no longer current. For documentation about these devices, see xxxx. </p>
+ -->
+
+</td>
+
+<td width="50%">
+
+
+<div class="toc">
+			<!-- Below this begins the 54x links --> 
+			
+			
+ <p><a href="#general28x">General Manuals</a>: IDE Help, Getting Started, Migrating projects, General Hardware
+ </p>
+
+
+ <p><a href="#24userguides"> 24x User Guides</a></p>
+
+ <p><a href="#24applicationreports"> Application Reports </a> </p>
+			
+	
+</div>
+
+
+
+<div class="standardlinkcategory">MISCELLANEOUS</div>
+
+
+
+<div class="toc">
+<br />
+
+<p>Can't find the document or 
+information you need?<A 
+href="#howtofind">Click here</A>. </p>
+<p><a href="dsp_algorithm_standard.html">TMS320 DSP Algorithm Standard Documentation</a></p>
+
+<p><strong>Find the <A 
+href="http://www.ti.com/sc/docs/psheets/manuals.htm">latest user guides</A> at ti.com</strong></p>
+
+<p>View <a href="http://www.ti.com/ccstudiodemos"> Multimedia Demos about Code Composer Studio IDE Features </a></p>
+
+<p> Local Manuals for <a href="manuals_ccs_full_c2000.html">C2000</a>, <a href="manuals_ccs_full_c5000.html">C5000</a>,  <a href="manuals_ccs_full_c6000.html">C6000</a> <a href="manuals_ccs_full_tms470.html">TMS470</a>  </p>
+
+</div>
+
+</td>
+
+
+</tr>
+
+
+
+
+
+<!--  end links  table  -->
+</table>
+
+
+<!--  begin 55x hardware main table  -->
+
+
+<table>
+
+
+<tr >
+<td class="navystrip" colspan="3">Code Composer Studio IDE Manuals</td>
+</tr>
+<tr><a name id="general28x"></a>
+<td class="graystrip" colspan="3">General Topics (Useful for all C2000 Hardware Targets)
+</td>
+</tr>
+
+
+<tr>
+<td width="8%">		   
+<a href="spru509f.pdf">SPRU509</a> 
+</td>
+<td width="35%">Code Composer Studio IDE v3.1 Getting Started Guide </td>
+<td width="45%">Provides basic procedures in program development flow order to help you begin programming with the IDE. 
+Online version of printed manual. 100+ pages.  </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+
+<a href="spraa08.pdf">SPRAA08</a> 
+</td>
+<td width="35%">Code Composer Studio&#8482; IDE  v.3 White Paper </td>
+<td width="45%"> This July 2004 version gives a readable high-level overview of the IDE's features. For more detailed and current information, see 
+the Getting Started Guide above.  </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru601.pdf">SPRA601</a> 
+</td>
+<td width="35%">Code Composer Studio's Command Window </td>
+<td width="45%">Describes how the Command Window plugin can be used by developers to enter commands, initialize target configuration and run automated test scripts. 
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru018d.pdf">SPRU018</a> 
+</td>
+<td width="35%"> TMS320C1x/C2x/C2xx/C5x Assembly Language Tools User's Guide</td>
+<td width="45%">Using the Assembly language tools (assembler, linker, and other tools used to develop assembly language code), assembler directives, macros, common object file format, and symbolic debugging directives for the 'C1x, 'C2x, 'C2xx, and 'C5x devices.
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru024e.pdf">SPRU024</a> 
+</td>
+<td width="35%"> TMS320C2x/C2xx/C5x Optimizing C Compiler User's Guide</td>
+<td width="45%">Using the 'C2x, 'C2xx, and 'C5x C compiler. This C compiler accepts ANSI standard C source code and produces TMS320 assembly language source code for the 'C2x, 'C2xx, and 'C5x devices.
+ </td>
+</tr>
+
+<tr>
+<td width="8%">
+<a name id="55xbios"></a>		   
+<a href="spru423d.pdf">SPRU423</a> 
+</td>
+<td width="35%">TMS320 DSP/BIOS User's Guide</td>
+<td width="45%"> How to use DSP/BIOS for embedded real-time DSP applications.   </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a name id=""></a>
+<a href="spraa74a.pdf">SPRAA74</a> 
+</td>
+<td width="35%">Creating Device Initialization GEL Files 
+</td>
+<td width="45%">How Code Composer Studio&#8482;  IDE uses the startup GEL files and how to properly write such files.
+ </td>
+</tr>
+
+
+<tr>
+<td width="8%">		   
+<a href="spru830.pdf">SPRA830</a> 
+</td>
+<td width="35%">Migrating Code Composer v4.12 projects to Code Composer Studio v.2.0 on the C2000 </td>
+<td width="45%">Describes the process of migrating a v4.12 project to a v2 project. 
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="sloa101.pdf">SLOA101</a> 
+</td>
+<td width="35%">Introduction to the Controller Area Network (CAN). How to Make a basic CAN bus using TI CAN transceivers and DSP's </td>
+<td width="45%">This paper presents a brief
+introduction to the CAN operating principles, the implementation of a basic CAN bus using
+Texas Instrument’s CAN transceivers and DSPs, and a discussion of the robust error
+detection and fault confinement mechanisms. Some of the properties of CAN, especially
+relating to the electrical layer and features of transceiver products, are then discussed at a
+tutorial level.
+Contents
+ </td>
+</tr>
+
+
+
+
+<tr >
+<td class="navystrip" colspan="3">TMS320C28x    </td>
+</tr>
+<tr><a name="280" id="280"></a>
+<td class="graystrip" colspan="3">Manuals for TMS320C28xx (but not  TMS320C281x) Devices 
+</td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru430d.pdf">SPRU430</a> 
+</td>
+<td width="35%">TMS320C28x DSP CPU and Instruction Set Reference Guide
+</td>
+<td width="45%">
+	Describes the central processing unit (CPU) and the assembly language instructions of the TMS320C28x 16-bit fixed-point digital signal processors (DSPs). It also describes emulation features available on these DSPs.
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru566b.pdf">SPRU566</a> 
+</td>
+<td width="35%"> 
+	TMS320F28x DSP Peripherals Reference Guide
+</td>
+<td width="45%">This overview guide includes all the peripherals available for TMS320F28x&#8482;devices.
+ </td>
+</tr>
+
+
+
+<tr><a name="28peripheral" id="28peripheral"></a>
+<td class="graystrip" colspan="3">28x Peripherals 
+</td>
+</tr>
+<tr>
+<td width="8%">		   
+<a href="spru051b.pdf">SPRU051</a> 
+</td>
+<td width="35%">TMS320F28x Serial Communication Interface (SCI) Peripheral Reference Guide </td>
+<td width="45%">The serial communication interface is a two-wire asynchronous serial port that supports a 16-level, receive and transmit FIFO for reducing servicing overhead.
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru712.pdf">SPRU712</a> 
+</td>
+<td width="35%">TMS320F28x Serial Communication Interface (SCI) Peripheral Reference Guide </td>
+<td width="45%">The serial communication interface is a two-wire asynchronous serial port that supports a 16-level, receive and transmit FIFO for reducing servicing overhead.
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru716.pdf">SPRU716</a> 
+</td>
+<td width="35%">TMS320x280x Analog to Digital Converter (ADC) Module Reference Guide </td>
+<td width="45%">This manual describes the features and operation of the analog-to-digital
+converter (ADC) that is available on the TMS320x280x digital signal
+processors (DSPs).
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru721.pdf">SPRU721</a> 
+</td>
+<td width="35%">TMS320x280x DSP
+Inter-Integrated Circuit (I2C) Module
+Reference Guide</td>
+<td width="45%">This manual describes the features and operation of the inter-integrated circuit
+(I2C) module that is available on the TMS320x280x digital signal processors
+(DSPs).
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru722.pdf">SPRU722</a> 
+</td>
+<td width="35%">TMS320x280x DSP Boot ROM Reference Guide 
+</td>
+<td width="45%">This guide describes the purpose and features of the TMS320x280x bootloader. It also
+describes other contents of the device on-chip boot ROM and identifies where
+all of the information is located within that memory.
+
+ </td>
+</tr>
+
+
+<tr>
+<td width="8%">		   
+<a href="spru790.pdf">SPRU790</a> 
+</td>
+<td width="35%">TMS320x280x Enhanced
+Quadrature Encoder Pulse (eQEP) Module Reference Guide 
+</td>
+<td width="45%">This guide describes the enhanced quadrature encoder pulse (eQEP) module,
+which is used for interfacing with a linear or rotary incremental encoder to
+get position, direction, and speed information from a rotating machine in high
+performance motion and position control systems. It includes the module description
+and registers.
+ </td>
+</tr>
+
+
+<tr>
+<td width="8%">		   
+<a href="spru791.pdf">SPRU791</a> 
+</td>
+<td width="35%">
+TMS320x280x Enhanced Pulse Width
+Modulator (ePWM) Module
+Reference Guide
+
+</td>
+<td width="45%">This guide describes the Enhanced Pulse Width Modulator Module. It includes
+an overview of the module and information about each of the sub-modules: Time-Base Module, Counter Compare Module, Action Qualifier Module, Dead-Band Generator Module, PWM Chopper (PC) Module, Trip Zone Module, Event Trigger Module). 
+
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru807.pdf">SPRU807</a> 
+</td>
+<td width="35%">TMS320x280x Enhanced Capture
+(eCAP) Module
+Reference Guide</td>
+<td width="45%">The enhanced capture (eCAP) module is used in systems where accurate
+timing of external events is important. This guide describes the module and
+how to use it.
+ </td>
+</tr>
+
+
+<tr>
+<td width="8%">		   
+<a href="spru059b.pdf">SPRU059</a> 
+</td>
+<td width="35%">TMS320F28x Serial Peripheral Interface (SPI) Peripheral Reference Guide </td>
+<td width="45%">The SPI is normally used for communications between the DSP controller and external peripherals or another controller.
+ </td>
+</tr>
+
+
+
+<tr>
+<td width="8%">		   
+<a href="spru074c.pdf">SPRU074</a> 
+</td>
+<td width="35%"> TMS320F28x Enhanced Controller Area Network (eCAN) Peripheral Reference Guide
+
+</td>
+<td width="45%">
+The enhanced ’Controller Area Network’ (eCAN) module implemented in the 28x™ DSP is compatible with the CAN 2.0B standard (active). It uses established protocol to communicate serially with other controllers in electrically noisy environments.
+ </td>
+</tr>
+
+
+
+<tr>
+<td width="8%">		   
+<a href="spru060c.pdf">SPRU060</a> 
+</td>
+<td width="35%"> 
+TMS320F28x Analog-to-Digital Converter (ADC) Peripheral Reference Guide
+</td>
+<td width="45%">
+ The TMS320C28x&#8482; ADC module is a 12-bit pipelined analog-to-digital converter (ADC). The analog circuits of this converter, referred to as the core in this document, include the front-end analog multiplexers (MUXs), sample-and-hold (S/H) circuits, the conversion core, voltage regulators, and other analog supporting circuits.
+
+ </td>
+</tr>
+
+
+<tr>
+<td width="8%">		   
+<a href="spru095b.pdf">SPRU095</a> 
+</td>
+<td width="35%"> TMS320F28x Boot ROM Peripheral Reference Guide
+</td>
+<td width="45%">
+	The Boot ROM is factory programmed with boot loading software. Boot-mode signals (general purpose I/Os) are used to tell the bootloader software what mode to use on power up. The TMS320F2810™/TMS320F2812™ Boot ROM also contains standard math tables, such as SIN/COS waveforms for use in IQ math related algorithms.
+
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru065c.pdf">SPRU065</a> 
+</td>
+<td width="35%">	TMS320F28x Event Manager (EV) Peripheral Reference Guide
+
+</td>
+<td width="45%">The event manager (EV) modules provide a broad range of functions and features that are particularly useful in motion control and motor control applications. The event-manager modules include general-purpose (GP) timers, full-compare/ PWM units, capture units, and quadrature-encoder pulse (QEP) cir-cuits. The two EV modules, EVA and EVB, are identical peripherals, intended for multi-axis/motion-control applications.
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru067c.pdf">SPRU067</a> 
+</td>
+<td width="35%"> TMS320F28x External Interface (XINTF) Peripheral Reference Guide
+</td>
+<td width="45%">
+The external interface is a nonmultiplexed asynchronous bus, similar to the C240x&#8482; external interface.
+
+ </td>
+</tr>
+
+
+<tr><a name="28software" id="28software"></a>
+<td class="graystrip" colspan="3">28x Software
+</td>
+</tr>
+
+
+<tr>
+<td width="8%">		   
+<a href="spru608a.pdf">SPRU608</a> 
+</td>
+<td width="35%">TMS320C28x Instruction Set Simulator Technical Overview </td>
+<td width="45%">This manual describes the simulator, available within the Code Composer Studio IDE for TMS320C2000  that simulates the instruction set of the C28x core. 
+
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru625c.pdf">SPRU625</a> 
+</td>
+<td width="35%">
+TMS320C28x DSP/BIOS
+Application Programming Interface 
+(API) Reference Guide
+
+</td>
+<td width="45%">This manual describes the development for C28x using DSP/BIOS. 
+
+ </td>
+</tr>
+
+
+
+<tr>
+<td width="8%">		   
+<a href="spru513.pdf">SPRU513</a> 
+</td>
+<td width="35%">	TMS320C28x Assembly Language Tools User's Guide </td>
+<td width="45%">Tells you how to use these assembly language tools: Assembler, Archiver, Linker, Cross-reference lister, Absolute lister,Hex-conversion utility
+ </td>
+</tr>
+
+
+<tr>
+<td width="8%">		   
+<a href="spru514.pdf">SPRU514  </a> 
+</td>
+<td width="35%"> 
+TMS320C28x Optimizing C/C++ Compiler User’s Guide</td>
+<td width="45%">	Explains how to use these compiler tools: Compiler,  Post-link optimizer, Library-build utility,Interlist utility, C++ name demangling utility
+ </td>
+</tr>
+
+
+<tr><a name="28applicationreports" id="28applicationreports"></a>
+<td class="graystrip" colspan="3">28x Application Reports
+</td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spraa58.pdf">SPRAA58</a> 
+</td>
+<td width="35%">TMS320x281x to TMS320x280x Migration Overview </td>
+<td width="45%">This application report describes differences between the Texas Instruments
+TMS320x281x and TMS320x280x DSPs to assist in application migration from the
+281x to the 280x. While the main focus of this document is migration from 281x to
+280x, users considering migrating in the reverse direction (280x to 281x) will also find
+this document useful. Functions that are identical in both devices are not necessarily
+included. All efforts have been made to provide a comprehensive list of the differences
+between the two device groups in the 28x generation. (See also: <a href="#281">TMS320C281x Manuals</a>).
+ </td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="8%">		   
+<a href="spra806.pdf">spra806</a> 
+</td>
+<td width="35%">An Easy Way of Creating a C-callable Assembly Function for the TMS320C28x DSP </td>
+<td width="45%">C-callable assembly routines require an understanding of parameter-passing conventions
+and environments expected by the C compiler. This application report provides instructions
+and suggestions to configure the C compiler to assist with these issues.
+ </td>
+</tr>
+
+<tr><a name="281" id="281"></a>
+<td class="graystrip" colspan="3">Manuals Specific to TMS320C281x Devices 
+</td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru061b.pdf">SPRU061</a> 
+</td>
+<td width="35%"> TMS320x281x DSP
+Multichannel Buffered Serial Port (McBSP)
+Reference Guide</td>
+<td width="45%">This manual describes the features and operation of the inter-integrated circuit
+(I2C) module that is available on the TMS320x280x digital signal processors
+(DSPs).
+ </td>
+</tr>
+
+
+<tr>
+<td width="8%">		   
+<a href="spru078b.pdf">SPRU078</a> 
+</td>
+<td width="35%"> TMS321x281x DSP
+System Control and Interrupts
+Reference Guide</td>
+<td width="45%">This guide describes how various 281x digital signal processor (DSP) system controls and interrupts
+work with peripherals. It includes information on:
+Flash and one-time programmable (OTP) memories, 
+Code security module (CSM), (a security feature incorporated in 
+28x devices), clocking mechanisms (including oscillator, PLL,  watchdog function
+and  low-power modes), 
+GPIO MUX registers used to select the operation of shared pins, 
+Peripheral frames and device emulation registers
+Peripheral interrupt expansion (PIE) block that multiplexes
+interrupt sources into a smaller set of interrupt inputs. 
+ </td>
+</tr>
+
+
+
+<tr>
+<td width="8%">		   
+<a href="spra873.pdf">SPRA873</a> 
+</td>
+<td width="35%"> 
+Thermoelectric Cooler Control Using a TMS320F2812 DSP
+and a DRV592 Power Amplifier
+</td>
+<td width="45%">This application report presents a thermoelectric cooler system consisting of a Texas
+Instruments TMS320F2812 digital signal processor (DSP) and DRV592 power amplifier.
+ A complete description of the experimental system, along
+with software and software operating instructions, are provided. </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spra958d.pdf">SPRA958</a> 
+</td>
+<td width="35%"> Running an Application from Internal Flash Memory on
+the TMS320F281x DSP</td>
+<td width="45%">This
+application report covers the requirements needed to properly configure application
+software for execution from on-chip flash memory. Requirements for both DSP/BIOS™
+and non-DSP/BIOS projects are presented. Some performance considerations and
+techniques are also discussed.  Code examples that run from internal RAM are also provided for
+completeness.
+ </td>
+</tr>
+
+
+
+<tr >
+<td class="navystrip" colspan="3">TMS320C24x Manuals </td>
+</tr>
+<tr><a name="24userguides" id="24userguides"></a>
+<td class="graystrip" colspan="3">User Manuals
+</td>
+</tr>
+
+
+
+<tr>
+<td width="8%">		   
+<a href="spru127c.pdf">SPRU127</a> 
+</td>
+<td width="35%">TMS320C20x User's Guide </td>
+<td width="45%">The hardware aspects of the 'C20x fixed-point digital signal processors. Describes pin assignments, architecture, instruction set, and software and hardware applications. Also includes electrical specifications and package mechanical data for all 'C20x devices.
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru160c.pdf">SPRU160</a> 
+</td>
+<td width="35%">TMS320F/C24x DSP Controllers CPU and Instruction Set</td>
+<td width="45%">The 'C24x 16-bit fixed-point digital signal processor controller. Provides CPU, hardware, and instruction set details for the 'C24x devices, and explains the 'C24x core that is common to all 'C24x devices.
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru161d.pdf">SPRU161</a> 
+</td>
+<td width="35%">TMS320F/C240 DSP Controllers Peripheral Library </td>
+<td width="45%">The peripherals that are available on the 'C24x DSP controllers. Discusses the following topics: digital I/O ports, dual 10-bit A/D converter, event manager, external memory interface, PLL clock module, serial communications interface, serial peripheral interface, and watchdog and real-time interrupt module.
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru248b.pdf">SPRU248</a> 
+</td>
+<td width="35%">	TMS320F240 DSP Controllers Evaluation Module Technical Reference </td>
+<td width="45%">Describes the hardware and software installation and general operation of the TMS320C24x evaluation module (EVM).
+ </td>
+</tr>
+
+
+
+<tr>
+<td width="8%">		   
+<a href="spru276c.pdf">SPRU276</a> 
+</td>
+<td width="35%">TMS320F243/F241/C242 DSP Controllers System and Peripherals </td>
+<td width="45%">	The architecture, system hardware, peripherals, and general operation of the TMS320F243, 'F241, and 'C242 DSP controllers.
+ </td>
+</tr>
+
+
+
+<tr>
+<td width="8%">		   
+<a href="spru282.pdf">SPRU282</a> 
+</td>
+<td width="35%">TMS320F20x/F24x DSP Embedded Flash Memory Tech Ref</td>
+<td width="45%"> The operation of the embedded flash EEPROM module on the TMS320F20x/F24x DSP device and provides sample code that you can use to develop your own software.
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru357b.pdf">SPRU357</a> 
+</td>
+<td width="35%">TMS320LF/LC240xA DSP Controllers System and Peripherals</td>
+<td width="45%">	Describes the architecture, system hardware, peripherals, and general operation of the TMS320LF/LC240xA digital signal controllers.
+ </td>
+</tr>
+
+
+
+
+
+<tr><a name="24applicationreports" id="24applicationreports"></a>
+<td class="graystrip" colspan="3">Application Reports 
+</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td width="8%">		   
+<a href="spra279.pdf">SPRA279</a> 
+</td>
+<td width="35%">Obtaining Absolute Encoder Position on a TMS320C240
+</td>
+    <td width="45%"> Obtaining Absolute Encoder Position on a TMS320C240 7
+Many servo applications require absolute position information as
+feedback. This document describes how the encoder count can be
+processed to obtain absolute position on the TMS320C240. The
+document includes a theoretical discussion, equations, timing
+diagrams and a lengthy code example.
+	 </td>
+</tr>
+
+
+<tr>
+<td width="8%">		   
+<a href="spra282.pdf">SPRA282</a> 
+</td>
+<td width="35%">
+Implementation of a Current Controlled Switched Reluctance Motor Drive Using TMS320F240
+</td>
+<td width="45%">The DSP controller TMS320F240 from Texas Instruments is
+suitable for a wide range of motor drives and power electronics
+applications. TMS320F240 reduces chip count of a system by
+integrating most of the important power electronics peripherals on
+chip and thus increases system reliability and reduces system
+cost. This application note describes complete implementation of
+a current controlled Switched Reluctance Motor Drive using
+TMS320F240.
+ </td>
+</tr>
+
+
+<tr>
+<td width="8%">		   
+<a href="spru284a.pdf">SPRA284</a> 
+</td>
+<td width="35%"> 	AC Induction Motor Control Using Constant V/Hz Principle and Space Vector PWM Technique with TMS320C240 </td>
+<td width="45%">The principles of constant V/Hz control for AC Induction motor and
+space vector PWM technique are reviewed. Two different
+implementations are presented. Implementation issues such as
+command voltage generation, switching pattern determination,
+speed measurement and scaling are discussed. Experimental
+data are shown. Full programs are attached in the appendices.
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spra287.pdf">SPRA287</a> 
+</td>
+<td width="35%">TMS320C/F240 Evaluation Board Initialization Software</td>
+<td width="45%">TMS320C/F240 Evaluation Board Initialization Software 7
+This note allows the user, once the necessary tools have been
+installed, to quickly start developing code based on the
+TMS320C/F240 Evaluation Module. This document describes how
+to use the tools and provides a lengthy code example.
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spra289.pdf">SPRA289</a> 
+</td>
+<td width="35%"> 	Configuring PWM Outputs of TMS320F240 with Dead Band for Different Power Devices </td>
+<td width="45%">The DSP controller TMS320F240 has a programmable dead band
+generator, to insert a dead band between two PWM outputs. The
+polarity of PWM channels (active high or active low) can be
+controlled using the ACTR register. The appropriate dead band
+between two PWM outputs can be inserted using the DBTCON
+register. This document discribes how to configure the PWM
+outputs with dead band for different power devices.
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spra295.pdf">SPRA295</a> 
+</td>
+<td width="35%"> Using the TMS320C24X
+DSP Controller for Optimal
+Digital Control </td>
+<td width="45%">This application report describes the features of the Texas
+Instruments (TI&#8482;) TMS320C24x digital signal processor (DSP), a
+low cost, single chip solution for optimal digital control system
+applications.
+ </td>
+</tr>
+<tr>
+<td width="8%">		   
+<a href="spra345.pdf">SPRA345</a> 
+</td>
+<td width="35%"> Digital Signal Processing Solutions for
+Motor Control Using the TMS320F240
+DSP-Controller</td>
+<td width="45%">This paper deals with an overview
+of DSP solutions in digital motor control applications whereby the
+focus will be the new DSP-Controller and its applications.
+This document was part of the first European DSP Education and
+Research Conference that took place September 26 and 27, 1996
+in Paris.
+ </td>
+</tr>
+
+
+<tr>
+<td width="8%">		   
+<a href="spra356a.pdf">SPRA356</a> 
+</td>
+<td width="35%">Detecting the reset source on the TMS320x240 DSP Controller </td>
+<td width="45%">This document describes the internal and external methods for generating device resets on  TMS320x240 targets. 
+ </td>
+</tr>
+
+
+<tr>
+<td width="8%">		   
+<a href="spra371.pdf">SPRA371</a> 
+</td>
+<td width="35%"> 	Dead-Time Generation on the TMS320C24x</td>
+<td width="45%">A Dead-Band generator protects the power semiconductors during 
+commutation. This document details possible uses and offers an example for the 24x platform. 
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spra363.pdf">SPRA363</a> 
+</td>
+<td width="35%">Using the Capture Units for low Speed Velocity Estimation on a TMS320C240</td>
+<td width="45%">Estimating velocity from a digital position sensor is a cost-effective
+strategy in motor control. Equations are given for two different first
+order approximations for velocity. This document describes how the
+capture units are used for low speed velocity estimation on the
+TMS320C240. Equations are given to demonstrate the techniques
+used. There is a lengthy code example and timing diagrams to show
+exactly how the techniques are implemented.
+ </td>
+</tr>
+
+
+<tr>
+<td width="8%">		   
+<a href="spra380.pdf">SPRA380</a> 
+</td>
+<td width="35%">Using C to Access Data Stored in Program Space Memory
+on the TMS320C24x DSP</td>
+<td width="45%">Efficient utilization of available memory in a TMS320C24x&#8482; DSP sometimes requires the
+placement of data in program space memory (as opposed to data space memory). In
+particular, the on-chip flash (or ROM) in the program space provides a large nonvolatile
+memory for storing constant arrays, look-up tables, and string tables. However, accessing
+this data using the C programming language is problematic, since the C-compiler provides
+no mechanism for accessing program space. This application note presents a C-callable
+library of six assembly code functions for accessing data in program space memory.
+These functions work with all members of the C24x&#8482; DSP generation, including all
+C/F24x, LC/LF240x, and LC/LF240xA devices.
+ </td>
+</tr>
+
+
+
+
+<tr>
+<td width="8%">		   
+<a href="spra413.pdf">SPRA413</a> 
+</td>
+<td width="35%">
+Generating a PWM Signal Modulated by an Analog Input Using the TMS320F240 EVM
+
+</td>
+<td width="45%">This EVM application converts an input value with the analog-todigital
+converter (ADC) module of the
+TMS320F240 Evaluation Module (EVM) and outputs a pulse width
+modulated (PWM) signal corresponding to the digital conversion
+of the analog input.
+ </td>
+</tr>
+<tr>
+<td width="8%">		   
+<a href="spra418.pdf">SPRA418</a> 
+</td>
+<td width="35%">
+Controlling a Sine Wave
+Generator with the Serial
+Port Using the TMS320F240
+EVM
+</td>
+<td width="45%">This application report explains how the EVM Application #9
+creates a 2 channel sine wave generator using the 12 bit digitalto-
+analog converter (DAC) of the Texas Instruments (TI™)
+TMS320F240 Evaluation Module (EVM). </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spra420a.pdf">SPRA420</a> 
+</td>
+<td width="35%">Switch Reluctance Motor Control - Basic Operation and Example Using the TMS320F240</td>
+<td width="45%">This report describes the basic operation of switched reluctance motors (SRMs) and
+demonstrates how a TMS320F240 DSP-based SRM drive from Texas Instruments (TI]) can
+be used to achieve a wide variety of control objectives.
+ </td>
+</tr>
+
+
+
+
+<tr>
+<td width="8%">		   
+<a href="spra451.pdf">SPRA451  	</a> 
+</td>
+<td width="35%">Point-to-Point Serial Communications Using the SPI Module of the TMS320F240 DSP Controller
+</td>
+<td width="45%">This application report discusses serial communications using the
+Serial Peripheral Interface (SPI) synchronous serial port of the
+Texas Instruments (TIä) TMS320F240 digital signal processor
+(DSP) controller. A general description of SPI features is provided
+for necessary background information. The CPU/SPI interface
+description includes a discussion of the bus interface and interrupt
+architecture.
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spra452.pdf">SPRA452</a> 
+</td>
+<td width="35%">Understanding the TMS320F240 External Memory Interface</td>
+<td width="45%">This application report describes the features and operation of the
+Texas Instruments (TI&#8482;) TMS320F240 digital signal processing
+(DSP) external memory interface.
+ </td>
+</tr>
+
+
+<tr>
+<td width="8%">		   
+<a href="spra461.pdf">SPRA461</a> 
+</td>
+<td width="35%"> 	Oversampling Techniques using the TMS320C24x Family</td>
+<td width="45%">This document describes the theory of oversampling, the hardware and
+software implementation on the TMS320C240 and important aspects that
+need to be considered when using oversampling.
+ </td>
+</tr>
+
+
+<tr>
+<td width="8%">		   
+<a href="spra497.pdf">SPRA497</a> 
+</td>
+<td width="35%">Driving Two Three-Phase Inverters with
+Deadband Using the TMS320F240 DSP
+Controller</td>
+<td width="45%">The Texas Instruments (TI&#8482;) TMS320F240 digital signal processor (DSP) controller contains a
+hardware deadband unit that automatically generates a deadband in the six PWM (pulse width
+modulation) signals from the full compare unit. This document describes how the DSP can use
+the other six available PWM signals to drive a second three-phase inverter with deadband.
+ </td>
+</tr>
+
+
+<tr>
+<td width="8%">		   
+<a href="spra496.pdf">SPRA499</a> 
+</td>
+<td width="35%">
+Handling Different Interrupts of the TMS320F241, TMS320F243, and TMS320C242 DSPs
+</td>
+<td width="45%">The Texas Instruments (TIä) TMS320F241, TMS320F243, TMS320C242 devices contain many
+on-chip peripherals, each of them capable of generating multiple interrupts in response to various
+events. The C2xLP core can support one non-maskable interrupt and six maskable interrupt
+requests. It does not handle directly all of the peripheral interrupt requests. That is why a
+centralized interrupt controller is needed to arbitrate them. On the TMS320F241, TMS320F243,
+and TMS320C242 devices, this controller is called the Peripheral Interrupt Expansion (PIE).
+This document explains the general organization of the PIE. An Interrupt Service Routine (ISR)
+programming example is also provided.
+ </td>
+</tr>
+
+
+
+
+<tr>
+<td width="8%">		   
+<a href="spra490.pdf">SPRA490</a> 
+</td>
+<td width="35%">Using PWM Output as a Digital-to-Analog Converter on a TMS320C240 DSP</td>
+<td width="45%">This paper presents a method for utilizing the on-chip PWM
+generators on a TMS320C240 DSP for digital-to-analog (D/A)
+conversion. The method involves analog low-pass filtering the
+PWM signal to remove high frequency components, leaving only
+the low-frequency content. Theoretical and experimental results
+are presented to quantify the achievable bit resolution. In
+addition, analog low-pass filter design is discussed and an
+example 3rd order filter design is given.
+ </td>
+</tr>
+
+
+<tr>
+<td width="8%">		   
+<a href="spra496.pdf">SPRA496</a> 
+</td>
+<td width="35%">TMS320F240 DSP-Solution for High-Resolution Position with Sin/Cos-Encoders</td>
+<td width="45%">This application report offers a solution for obtaining high-resolution position with sin/cosencoders
+using the Texas Instrument (TIä) TMS320F240 digital signal processor (DSP)
+controller.
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spra498.pdf">SPRA498</a> 
+</td>
+<td width="35%">Sensorless Speed Controlled Brushless DC Drive using the TMS320C242 DSP Controller</td>
+<td width="45%">The Brushless DC (BLDC) variable-speed drive is widely used because of its particularly high
+mechanical power density, simplicity, and cost effectiveness. This application report presents successively the sensorless principle theoretical background, the implementation of the rotor position determination, the BLDC drive imperfection handling the
+operating system, and every necessary experimental result, thus leading to an adaptable simple
+and cost-effective drive.
+ </td>
+</tr>
+
+
+<tr>
+<td width="8%">		   
+<a href="spra500.pdf">SPRA500</a> 
+</td>
+<td width="35%"> 	Understanding the CAN Controller on the TMS320C24x DSP Controller</td>
+<td width="45%">The Texas Instruments (TI&#8482;) TMS320F241, TMS320C241 and TMS320F243 digital signal
+processor (DSP) controllers contain an on-chip Control Area Network (CAN) module. This module
+is a FullCAN controller (Specification 2.0B). This application report describes the TMS320X241/3
+CAN module. Software examples are included for different modes of operation of the on-chip
+CAN module along with an application example for controlling the speed of a three-phase
+induction motor using the CAN bus.
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spra501.pdf">SPRA501</a> 
+</td>
+<td width="35%"> 	Reduced Electromagnetic Interference
+(EMI) with the TMS320C24x DSP
+ </td>
+<td width="45%">This document discusses how a designer can reduce electromagnetic interference (EMI) in digital
+motor control applications using the Texas Instruments (TIä) TMS320C24x digital signal
+processor (DSP) controller.
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru524.pdf">SPRA524</a> 
+</td>
+<td width="35%"> 	Space-Vector PWM With
+TMS320C24x/F24x Using Hardware and
+Software Determined Switching Patterns
+ </td>
+<td width="45%">Space-vector (SV) pulse width modulation (PWM) technique has become a popular PWM
+technique for three-phase voltage-source inverters (VSI) in applications such as control of AC
+induction and permanent-magnet synchronous motors. This document gives an in-depth
+discussion of the theory and implementation of the SV PWM technique.
+ </td>
+</tr>
+
+
+<tr>
+<td width="8%">		   
+<a href="spra588.pdf">SPRA588</a> 
+</td>
+<td width="35%">Implementation of a Speed Field-Oriented Control of 3-phase PMSM Motor using TMS320F420. </td> 
+                           <td width="45%">This application report presents a solution to control a 3-phase Permanent Magnet Synchronous
+motor using the Texas Instruments (TIä) TMS320F240 digital signal processor (DSP). This
+processor is part of a new family of DSPs that enable cost-effective design of intelligent
+controllers for brushless motors. The use of this DSP yields enhanced operations, fewer system
+components, lower system cost and increased efficiency. The control method presented is field
+oriented control (FOC). The sinusoidal voltage waveforms are generated by the DSP using the
+space vector modulation technique. A practical solution is described and results are given in this
+application report.
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spra589a.pdf">SPRA589</a> 
+</td>
+<td width="35%">
+Implementing Triple Conversion Single-Phase
+On-line UPS using TMS320C240
+</td>
+<td width="45%">Uninterruptible power supplies (UPS) play an important role in interfacing critical loads such as
+computers, communication systems, medical/life support systems, and industrial controls to the
+utility power grid. Among the various UPS topologies, on-line UPS provides the most protection to
+such loads against any utility power problem. However, because of the multiple power conversion
+stages, on-line UPSs have been the most complex and expensive type of system.Today’s lowcost,
+high-performance digital signal processor (DSP) controllers, such as the Texas Instruments
+(TIä) TMS320C24x, provide an improved and cost-effective solution for on-line UPS design. This
+application report discusses the different implementation aspects of a DSP based on-line UPS
+design using a TMS320C240.
+ </td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+<!-- 27x docs were removed for 3.1 <tr >
+<td class="navystrip" colspan="3">TMS320C27x Manuals </td>
+</tr>
+<tr><a name id="27general"></a>
+<td class="graystrip" colspan="3">User Manuals
+</td>
+</tr>
+
+
+
+
+
+<tr><a name id="27general"></a>
+<td class="graystrip" colspan="3">Application Reports 
+</td>
+</tr>
+ -->
+
+
+
+
+
+
+
+</table>
+
+<br />
+
+
+
+
+<a name id="howtofind"></a>		  
+<H3>Tips for Finding Documents and Related Information</H3>
+<P>The list of documents on this page are PDF files found locally in your 
+documentation directory (usually at <STRONG>C:\CCStudio\docs\pdf</STRONG> ). If 
+for some reason, a link calls up an error message, it may be because the PDF 
+file is not there or mislabeled. You have two options: 
+<OL>
+  <LI>copy the PDF file from the install CD (i.e., 
+  <STRONG>C:\CCSTudio\docs\pdf</STRONG>). 
+  <LI>go to the <A 
+  href="http://www.dspvillage.com/">http://www.dspvillage.com/</A> and enter 
+  your search term in the Keyword field on the top right corner of the page. 
+  Entering the document number (i.e., <EM>SPRA601</EM> ) tends to bring the most 
+  accurate results, although if that fails, you may need to enter the Title or 
+  keywords. Many PDF document have alphabet letters to indicate versions. So 
+  SPRU018D is more recent than SPRU018C. </LI></OL>
+<P>If you're not sure what document you need and just want to browse through a 
+list, you can find on the ti.com site a <A 
+href="http://www.ti.com/sc/docs/psheets/manuals.htm">list of online manuals</A>. 
+</P>
+<p>Adobe Acrobat Reader 6.0 includes several features to improve the overall reading experience for longer documents(including  better search and indexing capability). If you haven't upgraded already, you should do so.
+</p>
+<P>Many of the PDF's linked on this page are lengthy, so it's quite 
+possible that the document encompasses many more topics than the title would 
+suggest. If you're looking for a specific keyword (like a function or plugin 
+tool), you can also click the <EM>Index</EM> or <EM>Search</EM> tab on the left 
+side of this help window. Often this can be the fastest way to find the 
+information you need. </P>
+<P>Finally, TI now has a <A 
+href="http://www-k.ext.ti.com/sc/technical-support/dsp-kbase">searchable DSP 
+knowledgebase </A>which often contains the most up-to-date information about 
+potential bugs and workarounds. Because the number of results may sometimes be 
+unwieldy, it's often helpful to filter results. For example, changing the 
+<STRONG>Document Type</STRONG> to "<EM>Frequently Asked Questions</EM>" will 
+exclude PDF's and show only questions and answers entered by support engineers. 
+If you have a general question about Code Composer Studio, you can narrow your 
+search by choosing the right DSP Platform (C5000, C6000, etc) but leaving the 
+default "<EM>Not answered</EM>" for <STRONG>Tool Type</STRONG>. At the time of 
+this writing, search results are NOT organized chronologically, so you may need 
+to be careful that what you are reading is in fact the most recent document. If 
+you simply wish to browse through all of the most recent user guides, you can go 
+<A href="http://www.ti.com/sc/docs/psheets/manuals.htm">here</A> </P>
+<H5>See also: </H5>
+<P><A 
+href="http://www-k.ext.ti.com/sc/technical-support/knowledgebase/dsp/dsp_help.htm">Solving 
+Problems with the DSP Knowledgeabase</A> </P>
+<P><FONT face=Arial,Helvetica><FONT size=-1>Copyright (c) 2005 Texas Instruments 
+Incorporated. All rights reserved.</FONT></FONT> </P></BODY></HTML>
+
+
+
+

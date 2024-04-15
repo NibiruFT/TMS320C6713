@@ -1,0 +1,825 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+	
+	<title>Texas Instruments C5000 User Manuals </title>	
+	    <LINK REL="StyleSheet" HREF="ccsmanualsindex.css"
+      TYPE="text/css" MEDIA="screen">
+</head>
+
+<body>
+<IMG height=33 alt="Texas Instruments" src="logocorp.gif" 
+width=600 border=0>  <br /><br /> <br /> 
+
+<table class="links">
+<tr>
+<th width="50%"class="standardlinkcategory">TMS320C55x Manuals</th>
+<th  width="50%"class="standardlinkcategory"  >TMS320C54x Manuals </th> 
+</tr>
+<tr >
+
+
+<td border="0" width="50%" >
+
+
+<div class="toc">
+
+
+
+ <h4>IDE  </h4> <a href="#5xgeneral">Getting Started</a>, <a href="#5xgeneral">What's New</a> <br /> 
+
+
+
+
+<h4>TOOLS</h4> 
+<p class="indentlinks"><a href="#55xsimulator">Simulator </a> </p>
+        <p class="indentlinks"><a href="#55xassembly">Assembler</a> </p>
+  <p class="indentlinks">  <a href="#55xcompiler">Compiler</a> </p>
+   <!--  deleted for now <p class="indentlinks">  <a href="#6xact">Application Code Tuning </a> </p> -->
+
+	
+			  
+        <h4>PROGRAMMING</h4> 
+<p class="indentlinks"><a href="#55xprogram">Programmer's Guide</a> </p> 
+<p class="indentlinks"><a href="#55xbios">DSP/BIOS</a></p>  
+<p class="indentlinks"> <a href="#55xfoundation">Foundation Software (CSL, BSL, IMGLIB, DSPLIB) </a>  </p>
+
+
+
+
+ <h4>HARDWARE--General: </h4>
+   <p class="indentlinks"> <a href="#55xcpu">CPU & Instruction Sets</a>	</p>
+        <p class="indentlinks">	<a href="#55xperiphoverview">Peripherals Overview </a></p>
+		
+
+<h4>HARDWARE--Specific Peripherals: </h4> 
+
+		  
+        <p class="indentlinks"> <a href="#55xadc">ADC</a>&nbsp; <a href="#55xcache">Cache</a> &nbsp;
+          <a href="#55xdma">DMA</a>&nbsp; <a href="#55xemif">EMIF</a>&nbsp; <a href="#55xhpi">HPI</a> &nbsp;
+		   <a href="#55xi2c">I2C</a> &nbsp;
+          <a href="#55xmcbsp">McBSP</a>&nbsp; <a href="#55xmmcsd">MMC/SD</a>&nbsp; <a href="#55xrtc">RTC</a> 
+         &nbsp; <a href="#55xtimers">TIMER</a> &nbsp;<a href="#55xuart">UART</a>&nbsp;
+		  <a href="#55xusb">USB</a>
+		   </p>
+			
+
+
+
+
+</div>
+
+
+
+</td>
+
+<td width="50%">
+
+
+<div class="toc">
+			<!-- Below this begins the 54x links --> 
+ <h4>IDE  </h4> <a href="#5xgeneral">Getting Started</a>, <a href="#5xgeneral">What's New</a> <br /> 
+
+<h4>TOOLS</h4> 
+<p class="indentlinks"><a href="#54xsimulator">Simulator </a> </p>
+        <p class="indentlinks"><a href="#54xassembly">Assembler</a> </p>
+  <p class="indentlinks">  <a href="#54xcompiler">Compiler</a> </p>
+   <!--  deleted for now <p class="indentlinks">  <a href="#6xact">Application Code Tuning </a> </p> -->
+
+	
+			  
+        <h4>PROGRAMMING</h4> 
+<p class="indentlinks"><a href="#54xprogramguide">Programmer's Guide</a> </p> 
+<p class="indentlinks"><a href="#55xbios">DSP/BIOS</a></p> 
+			<!-- Note: this link goes to 55xbios which is the same as 54xbios   -->
+<p class="indentlinks"> <a href="#54xfoundation">Foundation Software (CSL, BSL, IMGLIB, DSPLIB) </a>  </p>
+
+
+
+        <h4>HARDWARE REFERENCE GUIDES</h4>
+  <p class="indentlinks"> <a href="#54xvo1">CPU & Peripherals </a>	</p>
+   <p class="indentlinks"> <a href="#54xvo2">Mnemonic Instruction Set </a> 	</p>
+    <p class="indentlinks"> <a href="#54xvo3">Algebraic Instruction Set</a> </p>
+	 <p class="indentlinks"> <a href="#54xvo4"> Applications Guide </a>	</p>
+	  <p class="indentlinks"> <a href="#54xvo5">Enhanced Peripherals </a>	</p>
+  
+
+		
+
+
+</div>
+<br />
+
+
+<div class="standardlinkcategory">MISCELLANEOUS</div>
+
+
+
+<div class="toc">
+<br />
+
+<p>Can't find the document or 
+information you need?<A 
+href="#howtofind">Click here</A>. </p>
+<p><a href="dsp_algorithm_standard.html">TMS320 DSP Algorithm Standard Documentation</a></p>
+
+<p><strong>Find the <A 
+href="http://www.ti.com/sc/docs/psheets/manuals.htm">latest user guides</A> at ti.com</strong></p>
+
+<p>View <a href="http://www.ti.com/ccstudiodemos"> Multimedia Demos about Code Composer Studio IDE Features </a></p>
+
+<p> Local Manuals for <a href="manuals_ccs_full_c2000.html">C2000</a>, <!-- <a href="manuals_ccs_full_c5000.html">C5000</a>, --> <a href="manuals_ccs_full_c6000.html">C6000</a>, <a href="manuals_ccs_full_tms470.html">TMS470</a>  </p>
+
+</div>
+
+</td>
+
+
+</tr>
+
+
+
+
+
+<!--  end links  table  -->
+</table>
+
+
+<!--  begin 55x hardware main table  -->
+
+
+<table>
+
+
+<tr >
+<td class="navystrip" colspan="3">C55xx Manuals</td>
+</tr>
+<tr><a name id="5xgeneral"></a>
+<td class="graystrip" colspan="3">General Topics (Useful for Both C55xx and C54xx)
+
+</td>
+</tr>
+
+
+
+<!-- Deleted for 2.4 release <tr>
+<td width="8%">		   
+<a name id="c5xgeneral"></a>
+<a href="spraa07.pdf">SPRAA07</a> 
+</td>
+<td width="35%">What's New in Code Composer Studio&#8482; Development Tools v3.0</td>
+<td width="45%">Describes new features and changes from the previous release. 
+ </td>
+</tr> -->
+
+<tr>
+<td width="8%">		   
+
+<a href="spru509f.pdf">SPRU509</a> 
+</td>
+<td width="35%">Code Composer Studio&#8482; IDE v3.1 Getting Started Guide</td>
+<td width="45%">Provides basic procedures in program development flow order to help you begin programming. 
+Online version of printed manual.  100+ pages. 
+ </td>
+
+</tr>
+
+
+
+<tr>
+<td width="8%">		   
+
+<a href="spraa08.pdf">SPRAA08</a> 
+</td>
+<td width="35%">Code Composer Studio&#8482; IDE v3. White Paper </td>
+<td width="45%"> This July 2004 version gives a readable high-level overview of the IDE's features. For more detailed and current information, see 
+the Getting Started Guide above.  </td>
+</tr>
+
+
+
+
+<tr>
+<td width="8%">
+<a name id="55xbios"></a>		   
+<a href="spru423d.pdf">SPRU423</a> 
+</td>
+<td width="35%">TMS320 DSP/BIOS User's Guide</td>
+<td width="45%"> How to use DSP/BIOS for embedded real-time DSP applications.   </td>
+</tr>
+
+<!-- undocumented feature for 3.1 <tr>
+<td width="8%">		   
+<a href="spru007e.pdf">SPRU007</a> 
+</td>
+<td width="35%">TMS320 DSP/BIOS TextConf User's Guide</td>
+<td width="45%"> This guide compares the two methods for configuring DSP/BIOS programs, details about using DSP/BIOS TextConf and information about the Target Content Object Model.  </td>
+</tr> -->
+
+<tr>
+<td width="8%">		   
+<a href="spru404g.pdf">SPRU404</a> 
+</td>
+<td width="35%">TMS320C5000 DSP/BIOS Application Programming Interface (API) Reference Guide</td>
+<td width="45%"> Reference information about the DSP/BIOS API  </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a name id=""></a>
+<a href="spraa74a.pdf">SPRAA74</a> 
+</td>
+<td width="35%">Creating Device Initialization GEL Files 
+</td>
+<td width="45%">How Code Composer Studio&#8482;  IDE uses the startup GEL files and how to properly write such files.
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a name id=""></a>
+<a href="spru623d.pdf">SPRU623</a> 
+</td>
+<td width="35%">Analysis Toolkit v1.3 for Code Composer Studio IDE
+</td>
+<td width="45%">The Analysis Toolkit (ATK)  lets you visualize source line coverage information. 
+It also provides exclusive
+profile data for individual functions and source line profile data for individual
+lines of code for each function.  
+ </td>
+</tr>
+
+
+<tr>
+<td class="graystrip" colspan="3">C55x Tools </td>
+</tr>
+
+<tr>
+<a name id="55xsimulator"></a>
+<td><a href="spru599d.pdf">SPRU599</a></td>
+<td> TMS320C55XX Instruction Set Simulator Technical Review 
+</td>
+<td>
+The TMS320C55xx™ Instruction Set Simulator, available within the Code Composer Studio IDE, simulates the instruction set of many members of the C55xx family of devices.  
+ </td>
+</tr>
+
+<tr>
+
+<td><a href="spru713a.pdf">SPRU713</a></td>
+<td> Rewind User's Guide 
+</td>
+<td>
+This user guide describes a special feature supported by C55x/C6xx simulators in
+the Code Composer Studio (CCS) IDE  environment. The feature is called
+Rewind. Using this feature, you can view past history of application being
+executed on the simulator, reducing the time to debug the application.
+ </td>
+</tr>
+
+
+<tr>
+<td><a href="spraa54.pdf">SPRAA54</a></td>
+<td> Using Code Composer Studio with Virtuo Platform Simulators
+</td>
+<td>
+The Virtio VPOM2420 has been developed to model the TI Innovator™ kit for the OMAP2420
+Platform. This virtual platform works with Code Composer Studio™ to develop and debug
+ARM and DSP programs. Code Composer Studio can be connected to VPOM2420 to
+develop and debug digital signal processors (DSP's), ARM11 and ARM7 code individually or 
+simultaneously.
+ </td>
+</tr>
+
+<tr>
+<a name id="55xassembly"></a>
+<td><a href="spru280h.pdf">SPRU280</a></td>
+<td> TMS320C55x Assembly Language Tools User's Guide 
+  </td>
+<td>Assembly language tools designed for the TMS320C55x devices: 
+- Assembler 
+- Archiver 
+- Linker 
+- Absolute lister
+- Cross-reference lister  
+- Absolute lister 
+- Hex conversion utility 
+</td>
+</tr>
+
+<tr>
+<a name id="55xcompiler"></a>
+<td><a href="spru281f.pdf">SPRU281</a></td>
+<td> TMS320C55x Optimizing C/C++ Compiler User's Guide 
+  </td>
+<td>Compiler tools designed for the TMS320C55x devices.
+-  C/C++ compiler
+- Source interlist utility
+- Library-build utility 
+</td>
+</tr>
+
+<tr>
+    <td class="graystrip" colspan="3">C55x  Programming Guide & Foundation Software</td>
+</tr>
+<tr>
+<td>
+<a name id="#55xprogram"></a>
+<a href="spru376a.pdf">SPRU376</a></td>
+<td> TMS320C55x DSP Programmer's Guide 
+</td>
+<td> Tips for programming the TMS32055x devices.  </td> 
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="8%">		   
+<a name id="55xfoundation"></a>
+<a href="spru433j.pdf">SPRU433</a> 
+</td>
+<td width="35%">TMS320C55x Chip Support Library API User's Guide 
+</td>
+<td width="45%">The TMS320C55x&#8482; DSP Chip Support Library (CSL) provides C-program functions to configure and control on-chip peripherals. It is intended to make it easier to get algorithms running in a real system. The goal is peripheral ease of use, shortened development time, portability, and hardware abstraction, with some level of standardization and compatibility among devices. A version of the CSL is available for all TMS320C55x&#8482; DSP devices. 
+
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru511.pdf">SPRU511</a> 
+</td>
+<td width="35%">TMS320C55x CSL USB Programmer's Reference Guide
+</td>
+<td width="45%">The TMS320C55x&#8482; CSL USB Programmer's Reference Guide provides C-program functions to configure and control on-chip Universal Serial Bus (USB) peripherals. It is intended to make it easier to get algorithms running in a real system. The information found in this document is targeted to the USB spec 1.1 compliant USB module. 
+ </td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru422g.pdf">SPRU422</a> 
+</td>
+<td width="35%">TMS320C55x DSP Library Programmer's Reference
+</td>
+<td width="45%">Commonly used DSP routines. The TMS320C55x DSPLIB includes over 50 C-callable assembly-optimized general-purpose signal processing routines. 
+ </td>
+</tr>
+
+
+<tr>
+<td width="8%">		   
+<a href="spru037c.pdf">SPRU037</a> 
+</td>
+<td width="35%">TMS320C55x Image/Video Processing Library Programmer's Reference
+</td>
+<td width="45%">The TMS320C5x image/video library (IMGLIB for short) is a collection of 21 high-level optimized DSP functions for the TMS320C55x device. This source code library includes C-callable functions (ANSI-C language compatible) for general-purpose imaging functions that include compression, video processing, machine vision and medical imaging type applications. 
+ </td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+<tr><a name id="55xcpu"></a>
+    <td class="graystrip" colspan="3">C55x Hardware  (CPU)</td>
+</tr>
+
+<tr>
+<td width="8%">		   
+<a href="spru393.pdf">SPRU393</a> 
+</td>
+<td width="35%">
+TMS320C55x Technical Overview 
+</td>
+    <td width="45%"> 
+The CPU architecture, low-power enhancements, and embedded emulation features of the TMS320C55x devices. 
+	   </td>
+</tr>
+
+
+<tr>
+<td width="8%">		   
+<a href="spru371f.pdf">SPRU371</a> 
+</td>
+<td width="35%">
+TMS320C55x DSP CPU Reference Guide 
+</td>
+    <td width="45%"> 
+	This manual describes the central processing unit (CPU) of the TMS320C55x™ (C55x™) fixed-point digital signal processors (DSPs): the architecture, registers, and operation.
+
+	   </td>
+</tr>
+
+
+<tr>
+<td>
+<a href="spru375g.pdf">SPRU375</a></td>
+<td> TMS320C55x DSP Algebraic Instruction Set Programmer's Guide 
+</td>
+<td> The algebraic instructions. This document also includes a summary of the instruction set, a list of instruction opcodes, and a cross-reference to the mnemonic instruction set.   </td> 
+</tr>
+
+<tr>
+<td>
+<a href="spru374g.pdf">SPRU374</a></td>
+<td> TMS320C55x DSP Mnemonic Instruction Set Reference Guide
+</td>
+<td> The mnemonic instructions. This document also includes a summary of the instruction set, a list of the instruction opcodes, and a cross-reference to the algebraic instruction set.    </td> 
+</tr>
+
+
+<tr><a name id="55xperiphoverview"></a>
+    <td class="graystrip" colspan="3">C55x Peripherals</td>
+</tr>
+
+<tr>
+<td>
+<a href="spru317g.pdf">SPRU317</a></td>
+<td> TMS320C55x DSP Peripherals Overview Reference Guide
+</td>
+<td> Peripherals and interfaces that are available on the TMS320C55x DSP's. Also describes how you can use software to turn on or off individual portions of the DSP.     </td> 
+</tr>
+
+
+
+
+
+
+
+<tr><a name id="55xadc"></a>
+<td>
+<a href="spru586b.pdf">SPRU586</a></td>
+<td>TMS320VC5507/5509 DSP Analog-to-Digital Converter (ADC) Reference Guide </td>
+<td>The analog-to-digital converter on the TMS320VC5507/5509 DSP's.       </td> 
+</tr>
+
+
+<tr><a name id="55xcache"></a>
+<td>
+<a href="spru630c.pdf">SPRU630</a></td>
+<td>TMS320VC5501/5502 DSP Instruction Cache Reference Guide  </td>
+<td>The instruction cache on the RMS320VC5501 and TMS320VC5502 DSP's.      </td> 
+</tr>
+
+<tr>
+<td>
+<a href="spru576d.pdf">SPRU576</a></td>
+<td>TMS320VC5510 DSP Instruction Cache Reference Guide  </td>
+<td>The instruction cache on the RMS320VC5510 DSP's.      </td> 
+</tr>
+
+
+<tr><a name id="55xdma"></a>
+<td>
+<a href="spru587b.pdf">SPRU587</a></td>
+<td> The TMS320VC5503/5507/5509/5510 Direct Memory Access (DMA) Controller Reference Guide
+</td>
+<td>  The DMA Controller on the TMS320VC5509, TMS320VC5509a  and TMS320VC5510 DSP's.    </td> 
+</tr>
+
+<tr>
+<td>
+<a href="spru613e.pdf">SPRU613</a></td>
+<td> The TMS320VC5501/5502 Direct Memory Access (DMA) Controller Reference Guide
+</td>
+<td>  The DMA Controller on the TMS320VC5501 and TMS320VC5502 DSP's.    </td> 
+</tr>
+
+
+<tr><a name id="55xemif"></a>
+<td>
+<a href="spru670a.pdf">SPRU670</a></td>
+<td> TMS320VC5503/5507/5509 DSP External Memory Interface (EMIF)Reference Guide
+</td>
+<td>  External memory interface on the TMS320VC5503/5507/5509 DSP's.    </td> 
+</tr>
+
+<tr>
+<td>
+<a href="spru590.pdf">SPRU590</a></td>
+<td> TMS320VC5510 DSP External Memory Interface (EMIF)Reference Guide
+</td>
+<td>   The External memory interface on the TMS320VC5510 DSP's.    </td> 
+</tr>
+
+<tr>
+<td>
+<a href="spru621c.pdf">SPRU621</a></td>
+<td> TMS320C5501/5502 DSP External Memory Interface (EMIF) Reference Guide
+</td>
+<td>External memory interface on the TMS320VC5501 and TMS320VC5502 DSP's.     </td> 
+</tr>
+
+<tr>
+<td>
+<a href="spru670a.pdf">SPRU670</a></td>
+<td> TMS320VC5503/5507/5509 DSP External Memory Interface (EMIF) Reference Guide
+</td>
+<td>This manual describes the features and operation of the external memory
+interface (EMIF) that is available on the TMS320VC5503, TMS320VC5507,
+TMS320VC5509 and TMS320VC5509A digital signal processors (DSPs) in
+the TMS320C55x DSP generation.    </td> 
+</tr>
+
+<tr><a name id="55xhpi"></a>
+<td>
+<a href="spru620c.pdf">SPRU620</a></td>
+<td> The TMS320VC5501/5502 DSP Host Port Interface (HPI) Reference Guide 
+</td>
+<td>  The host port interface on the TMS320VC5501 and TMS320VC5502 DSP's.    </td> 
+</tr>
+
+<tr>
+<td>
+<a href="spru588b.pdf">SPRU588</a></td>
+<td> The TMS320VC5510  DSP Host Port Interface (HPI) Reference Guide 
+</td>
+<td>  The host port interface on the  TMS320VC5510 DSP's.    </td> 
+</tr>
+
+<tr><a name id="55xi2c"></a>
+<td>
+<a href="spru146c.pdf">SPRU146</a></td>
+<td> The TMS320VC5501/5502/5503/5507/5509 DSP Inter-Integrated Circuit (I2C) Module Reference Guide 
+</td>
+<td> Features and operations of the inter-integrated circuit (I2C) module available on the  TMS320VC5501/5502/5503/5507/5509 DSP's. 
+   </td> 
+</tr>
+
+
+<tr><a name id="55xmcbsp"></a>
+<td>
+<a href="spru592d.pdf">SPRU592</a></td>
+<td> The TMS320VC5501/5502/5503/5507/5509/5510 DSP Multichannel Buffered Serial Port (McBSP) Reference Guide  
+</td>
+<td>  The multichannel buffered serial port on the TMS320VC5501, TMS320VC5502, TMS320VC5503, TMS320VC5507, TMS320VC5509  and TMS320VC5510 DSP's.    </td> 
+</tr>
+
+
+<tr><a name id="55xmmcsd"></a>
+<td>
+<a href="spru593.pdf">SPRU593</a></td>
+<td>  The 320VC5509 DSP MultiMediaCard/SC Card Controller Reference Guide 
+</td>
+<td>The Multimedia/SD Card Controller on the TMS320VC5509 and TMS320VC5509A DSP's.   
+   </td> 
+</tr>
+
+
+
+<tr><a name id="55xrtc"></a>
+<td>
+<a href="spru594b.pdf">SPRU594</a></td>
+<td> The TMS320VC5503/5507/5509 DSP Real-Time Clock (RTC) Reference Guide   
+</td>
+<td>   This manual describes the features and operation of the real-time clock (RTC) on the TMS320VC5503/5507/5509  DSP's.    </td> 
+</tr>
+
+
+<tr><a name id="55xtimers"></a>
+<td>
+<a href="spru618b.pdf">SPRU618</a></td>
+<td> The TMS320VC5501/5502 DSP Timers Reference Guide    
+</td>
+<td>  The timers on the TMS320VC5501 and TMS320VC5502 DSP's.    </td> 
+</tr>
+
+<tr>
+<td>
+<a href="spru595a.pdf">SPRU595</a></td>
+<td> The TMS320VC5503/5507/5509/5510 DSP Timers Reference Guide    
+</td>
+<td>  The timers on the TMS320VC5503, TMS320VC5507 and TMS320VC5509 and TMS320VC5510 DSP's.    </td> 
+</tr>
+
+
+<tr><a name id="55xuart"></a>
+<td>
+<a href="spru597b.pdf">SPRU597</a></td>
+<td> The TMS320VC5501/5502 DSP Universl Asynchronous Receiver/Transmitter (UART) Reference Guide   
+</td>
+<td>  The universal asynchronous receiver/transmitter on the  TMS320VC5501 and TMS320VC5502 DSP's.    </td> 
+</tr>
+
+
+
+<tr><a name id="55xusb"></a>
+<td>
+<a href="spru596a.pdf">SPRU596</a></td>
+<td> TMS320VC5507/5509 DSP Universal Serial Bus (USB) Module Reference Guide 
+</td>
+<td>    Features and  operation of the Universal Serial Bus
+(USB) module that is available on the TMS320VC5507, TMS320VC5509, and
+TMS320VC5509A digital signal processors (DSPs) in the TMS320C55x  DSP generation.  </td> 
+</tr>
+
+</table>
+
+<br />
+
+
+<table>
+
+
+<tr >
+<td class="navystrip" colspan="3">
+<a name id="#54xoverview"></a>C54xx Manuals</td>
+</tr>
+<tr>
+    <td class="graystrip" colspan="3"><a name id="#54xgeneral"></a> C54x Tools</td>
+</tr>
+
+
+<tr>
+<a name id="54xsimulator"></a>
+<td width="8%"><a href="spru598B.pdf">SPRU598</a></td>
+<td width="35%"> TMS320C54XX Instruction Set Simulator Technical Review 
+</td>
+<td width="45%">
+The TMS320C54xx™ Instruction Set Simulator, available within the Code Composer Studio IDE, simulates the instruction set of many members of the C54xx family of devices.  
+ </td>
+</tr>
+
+<tr>
+<a name id="54xassembly"></a>
+<td><a href="spru102f.pdf">SPRU102</a></td>
+<td> TMS320C54XX Assembly Language Tool User's Guide 
+</td>
+<td>
+Assembly language tools designed for the TMS320C54x devices. &#8212; Assembler &#8212; Archiver &#8212;
+ Linker &#8212; Absolute lister &#8212; Cross-reference utility &#8212; Hex-conversion utility &#8212; Mnemonic-to-algebraic translator utility. 
+ </td>
+</tr>
+
+<tr>
+<a name id="54xcompiler"></a>
+<td><a href="spru103g.pdf">SPRU103</a></td>
+<td> TMS320C54XX Optimizing C/C++ Compiler User's Guide 
+</td>
+<td>
+Compiler Tools designed for the TMS320C54xs devices. 
+&#8212; C/C++ Compiler; &#8212; Source interlist utility &#8212; Library-build utility
+ </td>
+</tr>
+
+<tr><a name id="54xfoundation"></a>
+<td class="graystrip" colspan="3"><a name id="#54xcpu"></a>
+
+C54x DSP Foundation Software  </td>
+</tr>
+
+<tr>
+<td><a href="spru420e.pdf">SPRU420</a></td>
+<td> TMS320C54x Chip Support Library API User's Guide 
+</td>
+<td>
+The TMS320C54x&#8482; Chip Support Library (CSL) provides C-program functions to configure and control on-chip peripherals. It is intended to make it easier to get algorithms running in a real system. The goal is peripheral ease of use, shortened development time, portability and hardware abstraction, with some level of standardization and compatibility among devices. A version of the CSL is available for all TMS320C54x&#8482;
+DSP devices. 
+ </td>
+</tr>
+
+<tr><a name id="54xprogramguide"></a>
+<td><a href="spru518c.pdf">SPRU518</a></td>
+<td> TMS320C54x DSP Library Programmer's Reference  
+</td>
+<td>
+The TMS320C54x&#8482; DSPLIB is an optimized DSP Function Library for C programmers on TMS320C54x devices. It includes over 50 C-callable assembly-optimized general-purpose signal processing routines. These routines are typically used in computerationally intensive real-time applications where optimal execution speed is critical. By using these routines you can acheive executions speeds considerably faster than equivalent code written in standard ANSI C language. In addition to providing read-to-use DSP functions, TI DSPLIB can significantly shorten your DSP application development time. 
+
+ </td>
+</tr>
+
+
+
+<tr>
+<td class="graystrip" colspan="3"><a name id="#54xcpu"></a>
+
+C54x Hardware Reference Guides </td>
+</tr>
+
+<tr>
+<a name id="54xvo1"></a>
+<td><a href="spru131g.pdf">SPRU131</a></td>
+<td> TMS320C54x DSP Reference Set, Volume 1: CPU and Peripherals 
+</td>
+<td>
+The CPU architecture, internal register structure, data and program addressing, instruction pipeline and on-chip periperhals for the TMS320C54x digital signal processors. Also includes development support information, parts lists and design considerations for using the XDS510 emulator. 
+ </td>
+</tr>
+<tr>
+<a name id="54xvo2"></a>
+<td><a href="spru172c.pdf">SPRU172</a></td>
+<td> TMS320C54x DSP Reference Set, Volume 2: Mnemonic Instruction Set
+</td>
+<td>
+The mnemonic instructions. Also includes a summary of instruction set classes and cycles. 
+ </td>
+</tr>
+
+<tr><a name id="54xvo3"></a>
+<td><a href="spru179c.pdf">SPRU179</a></td>
+<td> TMS320C54x DSP Reference Set, Volume 3: Algabraic  Instruction Set
+</td>
+<td>
+The algebraic instructions. Also includes a summary of instruction set classes and cycles. 
+ </td>
+</tr>
+
+<tr>
+<a name id="54xvo4"></a>
+<td><a href="spru173.pdf">SPRU173</a></td>
+<td> TMS320C54x DSP Reference Set, Volume 4: Applications Guide
+</td>
+<td>
+Software and hardware applications for the TMS320C54x DSP's. Also includes development support information, parts lists and design considerations for using the XDS510 emulator. 
+ </td>
+</tr>
+
+<tr> <a id="54xvo5"></a>
+<td><a href="spru302a.pdf">SPRU302</a></td>
+<td> TMS320C54x DSP Reference Set, Volume 5: Enhanced Peripherals
+</td>
+<td>
+The on-chip peripherals of the TMS3205402/C5410/C5420 digital signal processors. &#8212; Multi-channel Buffered Serial Ports (McBSP's) &#8212; Direct Memory Access (DMA) Controller &#8212;  Host Port Interface (HPI-8 and HPI-16)
+ </td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</table>
+
+<a name id="howtofind"></a>		  
+<H3>Tips for Finding Documents and Related Information</H3>
+<P>The list of documents on this page are PDF files found locally in your 
+documentation directory (usually at <STRONG>C:\CCStudio\docs\pdf</STRONG> ). If 
+for some reason, a link calls up an error message, it may be because the PDF 
+file is not there or mislabeled. You have two options: 
+<OL>
+  <LI>copy the PDF file from the install CD (i.e., 
+  <STRONG>C:\CCSTudio\docs\pdf</STRONG>). 
+  <LI>go to the <A 
+  href="http://www.dspvillage.com/">http://www.dspvillage.com/</A> and enter 
+  your search term in the Keyword field on the top right corner of the page. 
+  Entering the document number (i.e., <EM>SPRA601</EM> ) tends to bring the most 
+  accurate results, although if that fails, you may need to enter the Title or 
+  keywords. Many PDF document have alphabet letters to indicate versions. So 
+  SPRU018D is more recent than SPRU018C. </LI></OL>
+<P>If you're not sure what document you need and just want to browse through a 
+list, you can find on the ti.com site a <A 
+href="http://www.ti.com/sc/docs/psheets/manuals.htm">list of online manuals</A>. 
+</P>
+<p>Adobe Acrobat Reader 6.0 includes several features to improve the overall reading experience for longer documents(including  better search and indexing capability). If you haven't upgraded already, you should do so.
+</p>
+<P>Many of the PDF's linked on this page are lengthy, so it's quite 
+possible that the document encompasses many more topics than the title would 
+suggest. If you're looking for a specific keyword (like a function or plugin 
+tool), you can also click the <EM>Index</EM> or <EM>Search</EM> tab on the left 
+side of this help window. Often this can be the fastest way to find the 
+information you need. </P>
+<P>Finally, TI now has a <A 
+href="http://www-k.ext.ti.com/sc/technical-support/dsp-kbase">searchable DSP 
+knowledgebase </A>which often contains the most up-to-date information about 
+potential bugs and workarounds. Because the number of results may sometimes be 
+unwieldy, it's often helpful to filter results. For example, changing the 
+<STRONG>Document Type</STRONG> to "<EM>Frequently Asked Questions</EM>" will 
+exclude PDF's and show only questions and answers entered by support engineers. 
+If you have a general question about Code Composer Studio, you can narrow your 
+search by choosing the right DSP Platform (C5000, C6000, etc) but leaving the 
+default "<EM>Not answered</EM>" for <STRONG>Tool Type</STRONG>. At the time of 
+this writing, search results are NOT organized chronologically, so you may need 
+to be careful that what you are reading is in fact the most recent document. If 
+you simply wish to browse through all of the most recent user guides, you can go 
+<A href="http://www.ti.com/sc/docs/psheets/manuals.htm">here</A> </P>
+<H5>See also: </H5>
+<P><A 
+href="http://www-k.ext.ti.com/sc/technical-support/knowledgebase/dsp/dsp_help.htm">Solving 
+Problems with the DSP Knowledgeabase</A> </P>
+<P><FONT face=Arial,Helvetica><FONT size=-1>Copyright (c) 2005 Texas Instruments 
+Incorporated. All rights reserved.</FONT></FONT> </P></BODY></HTML>
+
+
+
+
