@@ -1,0 +1,179 @@
+;
+;Module Name:
+;    XDS560.INF
+;
+;Abstract:
+;    Windows INF file for installing XDS560 device driver
+;    Windows 98,98SE,ME,2000,XP
+;
+;    next_to = driver sys expected next to inf
+;    next_to
+;
+; copyright Texas Instruments Incorporated 2001
+;
+
+[Version]
+; version section
+Signature="$CHICAGO$"
+Class=TI_Emulators
+ClassGuid={894A7460-A033-11d2-821E-444553540000}
+Provider=%TIname%
+DriverVer=04/05/2002,2.00.00.0
+; Windows 98 does not recognize this driver version
+
+[Manufacturer]
+; manufacture section
+; %strkey%=models-section-name
+%TIMfg%=TIDeviceList
+
+; ================= Class section =====================
+
+[ClassInstall32]
+; ClassInstall32 Section
+; TI_Emulators  Class for all XDS560 compatible emulators
+Addreg=EmulatorClassReg
+
+[EmulatorClassReg]
+HKR,,,0,%ClassName%
+HKR,,FriendlyName,,"TI JTAG Emulators"
+HKR,,Icon,,-5
+
+
+;*****************************************
+; XDS560 Device  Install Section
+;*****************************************
+
+[TIDeviceList]
+; models or device section
+; Description=InstallSectionName, DeviceId, compatible id
+%DescriptionString%=XDS560_Device,PCI\VEN_10B5&DEV_9054&SUBSYS_AC6E104C
+
+[ControlFlags]
+; pnp cards should be excluded from select
+; * means exclude all devices listed in this INF
+ExcludeFromSelect=*
+
+[SourceDisksNames]
+; disk-ordinal="disk-desc"[,[disk-label],[unused,path]]
+; name of disk 1
+;1=%DiskId1%,,,Drivers\Win2000_XP
+;2=%DiskId1%,,,Drivers\Win98_ME
+1=%DiskId1%,,,""
+
+[SourceDisksFiles]
+; filename=disk-number[,subdir,size]
+; XDS560.sys can be found on the 1st disk
+; next_to
+xds560.sys=1,,
+;Win2000_XP\xds560.sys=1,Drivers,
+;Win98_ME\xds560.sys=1,Drivers,
+
+[DestinationDirs]
+DefaultDestDir=10,System32\Drivers
+; redundant, explicitly say where sys file should be copied
+XDS560_Device.Copy=10,System32\Drivers
+XDS560_Device.Copy.NT=10,System32\Drivers
+
+
+[XDS560_Device]
+; 98 install section
+DriverVer=04/05/2002,2.00.00.0
+;;AddReg=XDS560AddReg,XDS560StartDeviceAddReg
+AddReg=XDS560StartDeviceAddReg
+CopyFiles=XDS560_Device.Copy
+
+[XDS560_Device.NT]
+; NT DDinstall section
+DriverVer=04/05/2002,2.00.00.0
+CopyFiles=XDS560_Device.Copy.NT
+;;AddReg=XDS560AddReg.NT
+
+[XDS560_Device.Copy]
+; file-list-section for CopyFiles directive
+; destination, source, temporary, flags
+; where:
+;     destination (file name without directory),
+;     source (name on distribution),
+;     temporary (if dest in use, call file temp name until reboot-not used on Win2000),
+;     flags (bitmask: 0x2 = COPYFLG_NOSKIP - Don't allow user to skip this file)
+; next_to
+xds560.sys,xds560.sys,,2
+;xds560.sys,Win98_ME\xds560.sys,,2
+
+[XDS560_Device.Copy.NT]
+; file-list-section for CopyFiles directive
+; destination, source, temporary, flags
+; where:
+;     destination (file name without directory),
+;     source (name on distribution),
+;     temporary (if dest in use, call file temp name until reboot-not used on Win2000),
+;     flags (bitmask: 0x2 = COPYFLG_NOSKIP - Don't allow user to skip this file)
+; next_to
+xds560.sys,xds560.sys,,2
+;xds560.sys,Win2000_XP\xds560.sys,,2
+
+[XDS560_Device.hw]
+; 98 hw section
+AddReg=XDS560AddReg
+
+
+[XDS560AddReg]
+; 98
+HKLM,"System\CurrentControlSet\Services\XDS560\Parameters","BreakInKernel",0x10001,00000000
+HKLM,"System\CurrentControlSet\Services\XDS560\Parameters","BreakOnEntry",0x10001,00000000
+HKLM,"System\CurrentControlSet\Services\XDS560\Parameters","DebugMask",0x10001,00000000
+HKLM,"System\CurrentControlSet\Services\XDS560\Parameters","LogEvents",0x10001,00000001
+HKLM,"System\CurrentControlSet\Services\XDS560\Parameters","SDRAMREF",0x10001,1a,06,00,00
+HKLM,"System\CurrentControlSet\Services\XDS560\Parameters","EMIF_CE0",0x10001,30,00,00,00
+HKLM,"System\CurrentControlSet\Services\XDS560\Parameters","EMIF_CE1",0x10001,21,0c,b1,12
+HKLM,"System\CurrentControlSet\Services\XDS560\Parameters","EMIF_CE2",0x10001,30,00,00,00
+HKLM,"System\CurrentControlSet\Services\XDS560\Parameters","EMIF_CE3",0x10001,21,0c,14,43
+HKLM,"System\CurrentControlSet\Services\XDS560\Parameters","EMIF_GCTL",0x10001,6b,37,00,00
+HKLM,"System\CurrentControlSet\Services\XDS560\Parameters","EMIF_SDRAMCTL",0x10001,00,60,11,07
+HKLM,"System\CurrentControlSet\Services\XDS560\Parameters","GUID",0x00000,{894A7461-A033-11d2-821E-444553540000}
+
+[XDS560_Device.NT.hw]
+; NT hw section
+AddReg=XDS560AddReg.NT
+
+[XDS560AddReg.NT]
+; NT
+HKLM,"System\CurrentControlSet\Services\XDS560\Parameters","BreakInKernel",0x10001,00000000
+HKLM,"System\CurrentControlSet\Services\XDS560\Parameters","BreakOnEntry",0x10001,00000000
+HKLM,"System\CurrentControlSet\Services\XDS560\Parameters","DebugMask",0x10001,00000000
+HKLM,"System\CurrentControlSet\Services\XDS560\Parameters","LogEvents",0x10001,00000001
+HKLM,"System\CurrentControlSet\Services\XDS560\Parameters","SDRAMREF",0x10001,0x0000061A
+HKLM,"System\CurrentControlSet\Services\XDS560\Parameters","EMIF_CE0",0x10001,0x00000030
+HKLM,"System\CurrentControlSet\Services\XDS560\Parameters","EMIF_CE1",0x10001,0x12B10C21
+HKLM,"System\CurrentControlSet\Services\XDS560\Parameters","EMIF_CE2",0x10001,0x00000030
+HKLM,"System\CurrentControlSet\Services\XDS560\Parameters","EMIF_CE3",0x10001,0x43140C21
+HKLM,"System\CurrentControlSet\Services\XDS560\Parameters","EMIF_GCTL",0x10001,0x0000376B
+HKLM,"System\CurrentControlSet\Services\XDS560\Parameters","EMIF_SDRAMCTL",0x10001,0x07116000
+HKLM,"System\CurrentControlSet\Services\XDS560\Parameters","GUID",0x00000,{894A7461-A033-11d2-821E-444553540000}
+
+[XDS560StartDeviceAddReg]
+; 98
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,xds560.sys
+
+[XDS560_Device.NT.Services]
+; NT DDInstall Services section
+; addservice =servicename,[flags],service-install-section[,eventlog-install-section[,eventlog-type][,eventname]]]
+AddService=XDS560,2,XDS560_Service_Inst.NT
+
+[XDS560_Service_Inst.NT]
+; NT
+DisplayName    = %ServiceName%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\xds560.sys
+LoadOrderGroup = Extended Base
+
+[Strings]
+TIMfg = "Texas Instruments"
+TIname = "Texas Instruments"
+ClassName = "Texas Instruments Emulators"   ; Name of the class as it appears in the device manager
+DiskId1 = "XDS560 Installation Disk"
+DescriptionString = "Texas Instruments XDS560 PCI JTAG Emulator"
+ServiceName = "Texas Instruments XDS560 Device Driver"
