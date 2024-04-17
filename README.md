@@ -1,5 +1,5 @@
 # TMS320C6713
-[TMS320C6713 DSP Starter Kit](https://5.imimg.com/data5/SELLER/Default/2023/2/BF/PQ/IG/139567121/dsp-starter-kit-dsk-starter-kit-tms320c6713.png) (DSK) developed jointly with Spectrum Digital is a low-cost development platform designed to speed the development of high precision applications based on TI´s TMS320C6000 floating point DSP generation.
+[TMS320C6713 DSP Starter Kit](https://5.imimg.com/data5/SELLER/Default/2023/2/BF/PQ/IG/139567121/dsp-starter-kit-dsk-starter-kit-tms320c6713.png) (DSK) developed jointly with Spectrum Digital a low-cost development platform designed to speed the development of high precision applications based on TI´s TMS320C6000 floating point DSP generation.
 
 <p align="center">
         <img src="https://vdronetech.com/wp-content/uploads/2023/02/dsp-starter-kit-2.png"
