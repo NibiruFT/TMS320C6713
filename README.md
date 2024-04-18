@@ -11,4 +11,4 @@ The [Code Composer Studio](https://community.element14.com/products/devtools/tec
 
 > Installation: This project was made with the original version CCS v3.1. All the content included in the [CD](https://5.imimg.com/data5/SELLER/Default/2023/2/BF/PQ/IG/139567121/dsp-starter-kit-dsk-starter-kit-tms320c6713.png) and its installation process can be found [here](https://github.com/NibiruFT/TMS320C6713/tree/main/Installation).
 >
-> The CCS IDE have a lot of [newer versions](https://www.ti.com/tool/download/CCSTUDIO), but most of the new ones have some [compatibility issues](https://e2e.ti.com/support/tools/code-composer-studio-group/ccs/f/code-composer-studio-forum/260934/compatibility-ccs-with-tms320c6713-dsk-kit) with TMS320C6713.
+> ⚠️ The CCS IDE have a lot of [newer versions](https://www.ti.com/tool/download/CCSTUDIO), but most of the new ones have some [compatibility issues](https://e2e.ti.com/support/tools/code-composer-studio-group/ccs/f/code-composer-studio-forum/260934/compatibility-ccs-with-tms320c6713-dsk-kit) with TMS320C6713.
