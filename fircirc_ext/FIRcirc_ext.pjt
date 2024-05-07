@@ -1,0 +1,44 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="C:\CCStudio_v3.1\myprojects\fircirc_ext\"
+ProjectType=Executable
+CPUFamily=TMS320C67XX
+Tool="Compiler"
+Tool="CustomBuilder"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="..\Support\c6713dskinit.c"
+Source="..\Support\Vectors_intr.asm"
+Source="FIRcirc.c"
+Source="FIRcircfunc.asm"
+Source="FIRcirc_ext.cmd"
+
+["Compiler" Settings: "Debug"]
+Options=-g -q -fr"C:\CCStudio_v3.1\myprojects\fircirc_ext\Debug" -i"c:\CCStudio_v3.1\C6000\dsk6713\include" -d"CHIP_6713" -mv6710 --mem_model:data=far
+
+["Compiler" Settings: "Release"]
+Options=-q -o3 -fr"C:\CCStudio_v3.1\myprojects\fircirc_ext\Release" -mv6700
+
+["DspBiosBuilder" Settings: "Debug"]
+Options=-v6x
+
+["DspBiosBuilder" Settings: "Release"]
+Options=-v6x
+
+["Linker" Settings: "Debug"]
+Options=-q -c -m".\Debug\FIRcirc_ext.map" -o".\Debug\FIRcirc_ext.out" -x -i"c:\CCStudio_v3.1\C6000\dsk6713\lib" -l"rts6700.lib" -l"DSK6713bsl.lib" -l"csl6713.lib"
+
+["Linker" Settings: "Release"]
+Options=-q -c -m".\Release\FIRcirc.map" -o".\Release\FIRcirc.out" -x
+
+["FIRcirc_ext.cmd" Settings: "Debug"]
+LinkOrder=1
+
+["FIRcirc_ext.cmd" Settings: "Release"]
+LinkOrder=1
+
