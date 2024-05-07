@@ -1,0 +1,57 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: vc_spectrogram - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/vc_spectrogram.res" /d "_DEBUG" /d "_AFXDLL" "C:\c6713\myprojects\Spectrogram\vc_spectrogram\vc_spectrogram.rc"" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP1B5.TMP" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/vc_spectrogram.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\c6713\myprojects\Spectrogram\vc_spectrogram\MatlabClass.cpp"
+"C:\c6713\myprojects\Spectrogram\vc_spectrogram\rtdxint.cpp"
+"C:\c6713\myprojects\Spectrogram\vc_spectrogram\RTDXThread.cpp"
+"C:\c6713\myprojects\Spectrogram\vc_spectrogram\vc_spectrogram.cpp"
+"C:\c6713\myprojects\Spectrogram\vc_spectrogram\vc_spectrogramDlg.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP1B5.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP01B6.TMP" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/vc_spectrogram.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\c6713\myprojects\Spectrogram\vc_spectrogram\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP01B6.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP01B7.TMP" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/vc_spectrogram.pdb" /debug /machine:I386 /out:"Debug/vc_spectrogram.exe" /pdbtype:sept 
+.\Debug\MatlabClass.obj
+.\Debug\rtdxint.obj
+.\Debug\RTDXThread.obj
+.\Debug\StdAfx.obj
+.\Debug\vc_spectrogram.obj
+.\Debug\vc_spectrogramDlg.obj
+.\Debug\vc_spectrogram.res
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP01B7.TMP"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+MatlabClass.cpp
+rtdxint.cpp
+RTDXThread.cpp
+vc_spectrogram.cpp
+vc_spectrogramDlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+vc_spectrogram.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
