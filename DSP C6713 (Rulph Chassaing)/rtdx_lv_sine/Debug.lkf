@@ -1,0 +1,7 @@
+-z -q -c -m"./Debug/rtdx_lv_sine.map" -o"./Debug/rtdx_lv_sine.out" -x -i"c:/c6713/c6000/bios/lib" -i"c:/c6713/C6000/dsk6713/lib" -i"c:/c6713/c6000/rtdx/lib" -i"c:/c6713/c6000/cgtools/lib" -l"DSK6713bsl.lib"
+"C:\c6713\myprojects\rtdx_lv_sine\Debug\c6713dskinit.obj"
+"C:\c6713\myprojects\rtdx_lv_sine\Debug\intvecs.obj"
+"C:\c6713\myprojects\rtdx_lv_sine\Debug\rtdx_lv_sine.obj"
+"C:\c6713\myprojects\rtdx_lv_sine\Debug\rtdx_lv_sinecfg.obj"
+"C:\c6713\myprojects\rtdx_lv_sine\Debug\rtdx_lv_sinecfg_c.obj"
+"C:\c6713\myprojects\rtdx_lv_sine\rtdx_lv_sinecfg.cmd"

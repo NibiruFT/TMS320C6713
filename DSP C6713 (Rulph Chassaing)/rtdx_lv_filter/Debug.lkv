@@ -1,0 +1,4 @@
+-z -q -c -m"./Debug/rtdx_lv_filter.map" -o"./Debug/rtdx_lv_filter.out" -x -i"c:/c6713/c6000/bios/lib" -i"c:/c6713/C6000/dsk6713/lib" -i"c:/c6713/c6000/rtdx/lib" -i"c:/c6713/c6000/cgtools/lib" -l"rts6700.lib" -l"rtdx.lib"
+"C:\c6713\myprojects\rtdx_lv_filter\Debug\intvecs.obj"
+"C:\c6713\myprojects\rtdx_lv_filter\Debug\rtdx_lv_filter.obj"
+"C:\c6713\myprojects\rtdx_lv_filter\c6713dsk.cmd"
