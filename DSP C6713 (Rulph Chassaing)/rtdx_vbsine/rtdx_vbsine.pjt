@@ -1,0 +1,40 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="C:\c6713\myprojects\rtdx_vbsine\"
+ProjectType=Executable
+CPUFamily=TMS320C67XX
+Tool="Compiler"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="..\Support\c6713dskinit.c"
+Source="rtdx_vbsine.c"
+Source="rtdx_vbsine.cdb"
+Source="rtdx_vbsinecfg.cmd"
+
+[Generated Files]
+Source="rtdx_vbsinecfg.s62"
+Source="rtdx_vbsinecfg_c.c"
+
+["Compiler" Settings: "Debug"]
+Options=-g -q -fr"C:\c6713\myprojects\rtdx_vbsine\Debug" -d"CHIP_6713" -mv6710
+
+["Compiler" Settings: "Release"]
+Options=-q -o3 -fr"C:\c6713\myprojects\rtdx_vbsine\Release" -mv6700
+
+["DspBiosBuilder" Settings: "Debug"]
+Options=-v6x
+
+["DspBiosBuilder" Settings: "Release"]
+Options=-v6x
+
+["Linker" Settings: "Debug"]
+Options=-q -c -m".\Debug\rtdx_vbsine.map" -o".\Debug\rtdx_vbsine.out" -x -l"dsk6713bsl.lib"
+
+["Linker" Settings: "Release"]
+Options=-q -c -m".\Release\rtdx_vbsine.map" -o".\Release\rtdx_vbsine.out" -x
+
