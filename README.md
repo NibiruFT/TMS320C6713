@@ -12,3 +12,7 @@ The [Code Composer Studio](https://community.element14.com/products/devtools/tec
 > Installation: This project was made with the original version CCS v3.1. All the content included in the [CD](https://5.imimg.com/data5/SELLER/Default/2023/2/BF/PQ/IG/139567121/dsp-starter-kit-dsk-starter-kit-tms320c6713.png) and its installation process can be found [here](https://github.com/NibiruFT/TMS320C6713/tree/main/Installation).
 >
 > ⚠️ The CCS IDE have a lot of [newer versions](https://www.ti.com/tool/download/CCSTUDIO), however, many of them encounter [compatibility issues](https://e2e.ti.com/support/tools/code-composer-studio-group/ccs/f/code-composer-studio-forum/260934/compatibility-ccs-with-tms320c6713-dsk-kit) with TMS320C6713.
+
+## Digital Signal Processing and Applications with the C6713 and C6416 DSK
+
+This book is a tutorial on digital techniques for waveform generation, digital filters, and digital signal processing tools and techniques. The typical chapter begins with some theoretical material followed by working examples and experiments using the TMS320C6713-based DSPStarter Kit (DSK)
