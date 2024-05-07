@@ -1,0 +1,13 @@
+-------------------------  rtdx_matlabFFT.pjt - Debug  -------------------------
+[c6713dskinit.c] "C:\CCStudio_v3.1\C6000\cgtools\bin\cl6x" -g -q -fr"C:/CCStudio_v3.1/myprojects/rtdx_matlabFFT/Debug" -i"c:/CCStudio_v3.1/C6000/dsk6713/include" -d"CHIP_6713" -ml3 -mv6700 -@"../rtdx_matlabFFT/Debug.lkf" "c6713dskinit.c"
+
+[intvecs.asm] "C:\CCStudio_v3.1\C6000\cgtools\bin\cl6x" -g -q -fr"C:/CCStudio_v3.1/myprojects/rtdx_matlabFFT/Debug" -i"c:/CCStudio_v3.1/C6000/dsk6713/include" -d"CHIP_6713" -ml3 -mv6700 -@"Debug.lkf" "intvecs.asm"
+*** MESSAGE! line 20: INFO -- Compiling for JTAG RTDX by default.
+
+[rtdx_matlabFFT.c] "C:\CCStudio_v3.1\C6000\cgtools\bin\cl6x" -g -q -fr"C:/CCStudio_v3.1/myprojects/rtdx_matlabFFT/Debug" -i"c:/CCStudio_v3.1/C6000/dsk6713/include" -d"CHIP_6713" -ml3 -mv6700 -@"Debug.lkf" "rtdx_matlabFFT.c"
+
+[Linking...] "C:\CCStudio_v3.1\C6000\cgtools\bin\cl6x" -@"Debug.lkf"
+<Linking>
+
+Build Complete,
+  0 Errors, 0 Warnings, 0 Remarks.

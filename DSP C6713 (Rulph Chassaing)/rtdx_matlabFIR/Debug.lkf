@@ -1,0 +1,5 @@
+-z -q -c -m"./Debug/rtdx_matlabFIR.map" -o"./Debug/rtdx_matlabFIR.out" -x -i"c:/CCStudio_v3.1/C6000/dsk6713/lib" -i"C:/CCStudio_v3.1/C6000/rtdx/lib" -i"C:/CCStudio_v3.1/C6000/csl/lib" -i"C:/CCStudio_v3.1/C6000/xdais/lib" -i"C:/CCStudio_v3.1/C6000/bios/lib" -i"C:/CCStudio_v3.1/C6000/cgtools/lib" -l"rts6700.lib" -l"dsk6713bsl.lib" -l"csl6713.lib" -l"rtdx.lib"
+"C:\CCStudio_v3.1\finalmyprojects\rtdx_matlabFIR\C6713dsk.cmd"
+"C:\CCStudio_v3.1\finalmyprojects\rtdx_matlabFIR\Debug\FIR3LP_RTDX.obj"
+"C:\CCStudio_v3.1\finalmyprojects\rtdx_matlabFIR\Debug\intvecs.obj"
+"C:\CCStudio_v3.1\finalmyprojects\rtdx_matlabFIR\Debug\rtdx_buf.obj"

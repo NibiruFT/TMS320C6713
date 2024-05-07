@@ -1,0 +1,4 @@
+-z -q -c -m"./Debug/RTDX_MATLAB_sim.map" -o"./Debug/RTDX_MATLAB_sim.out" -x -i"C:/CCStudio_v3.1/C6000/rtdx/lib" -i"C:/CCStudio_v3.1/C6000/csl/lib" -i"C:/CCStudio_v3.1/C6000/xdais/lib" -i"C:/CCStudio_v3.1/C6000/bios/lib" -i"C:/CCStudio_v3.1/C6000/cgtools/lib" -l"rts6700.lib" -l"rtdx.lib" -l"rtdxhs.lib"
+"C:\CCStudio_v3.1\myprojects\rtdx_matlab_sim\C6713DSK.cmd"
+"C:\CCStudio_v3.1\myprojects\rtdx_matlab_sim\Debug\intvecs.obj"
+"C:\CCStudio_v3.1\myprojects\rtdx_matlab_sim\Debug\RTDX_MATLAB_sim.obj"

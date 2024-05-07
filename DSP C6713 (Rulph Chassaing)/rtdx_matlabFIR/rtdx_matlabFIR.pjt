@@ -1,0 +1,43 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="C:\CCStudio_v3.1\myprojects\rtdx_matlabFIR\"
+ProjectType=Executable
+CPUFamily=TMS320C67XX
+Tool="Compiler"
+Tool="CustomBuilder"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="FIR3LP_RTDX.c"
+Source="intvecs.asm"
+Source="rtdx_buf.c"
+Source="C6713dsk.cmd"
+
+["Compiler" Settings: "Debug"]
+Options=-g -q -fr"C:\CCStudio_v3.1\myprojects\rtdx_matlabFIR\Debug" -d"CHIP_6713" -mv6700
+
+["Compiler" Settings: "Release"]
+Options=-q -o3 -fr"C:\CCStudio_v3.1\myprojects\rtdx_matlabFIR\Release" -mv6700
+
+["DspBiosBuilder" Settings: "Debug"]
+Options=-v6x
+
+["DspBiosBuilder" Settings: "Release"]
+Options=-v6x
+
+["Linker" Settings: "Debug"]
+Options=-q -c -m".\Debug\rtdx_matlabFIR.map" -o".\Debug\rtdx_matlabFIR.out" -x -i"c:\CCStudio_v3.1\C6000\dsk6713\lib" -l"rts6700.lib" -l"dsk6713bsl.lib" -l"csl6713.lib" -l"rtdx.lib"
+
+["Linker" Settings: "Release"]
+Options=-q -c -m".\Release\rtdx_matlabFIR.map" -o".\Release\rtdx_matlabFIR.out" -x
+
+["C6713dsk.cmd" Settings: "Debug"]
+LinkOrder=1
+
+["C6713dsk.cmd" Settings: "Release"]
+LinkOrder=1
+
