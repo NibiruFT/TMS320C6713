@@ -15,4 +15,4 @@ The [Code Composer Studio](https://community.element14.com/products/devtools/tec
 
 ## Digital Signal Processing and Applications with the C6713 and C6416 DSK
 
-This book is a tutorial on digital techniques for waveform generation, digital filters, and digital signal processing tools and techniques. The typical chapter begins with some theoretical material followed by working examples and experiments using the TMS320C6713-based DSPStarter Kit (DSK)
+DSP C6713 by Rulph Chassaing is a tutorial book on digital techniques for waveform generation, digital filters, and digital signal processing tools and techniques. The typical chapter begins with some theoretical material followed by working examples and experiments using the TMS320C6713-based DSPStarter Kit (DSK)
