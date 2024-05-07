@@ -1,0 +1,3 @@
+-z -q -c -m"./Debug/EMIF.map" -o"./Debug/EMIF.out" -x -i"c:/c6713/c6000/bios/lib" -i"c:/c6713/C6000/dsk6713/lib" -i"c:/c6713/c6000/rtdx/lib" -i"c:/c6713/c6000/cgtools/lib" -l"rts6700.lib"
+"C:\c6713\myprojects\EMIF\Debug\EMIF.obj"
+"C:\c6713\myprojects\Support\C6713dsk.cmd"

@@ -1,0 +1,13 @@
+/* equalise.gel - modified from GEL file used in graphEQ */
+
+menuitem "Equalise"
+
+slider Bass(0,10,1,1,bass_slider) {		/* From 0 to 10 by 1 */
+	bass_gain = ((float)bass_slider)/10;  }   /* ->From 0.0 to 1.0 by 0.1 */
+
+slider Middle(0,10,1,1,mid_slider) {		/* From 0 to 10 by 1 */
+	mid_gain = ((float)mid_slider)/10;  }     /* ->From 0.0 to 1.0 by 0.1 */
+	
+slider Treble(0,10,1,1,treble_slider) {		/* From 0 to 10 by 1 */
+	treble_gain = ((float)treble_slider)/10;  }   /* ->From 0.0 to 1.0 by 0.1 */
+

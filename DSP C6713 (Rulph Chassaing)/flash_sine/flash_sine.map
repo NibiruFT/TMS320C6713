@@ -1,0 +1,28 @@
+********************************************************************************
+TMS320C6x COFF/Hex Converter                                              v5.1.0
+********************************************************************************
+
+INPUT FILE NAME: <debug\flash_sine.out>
+OUTPUT FORMAT:   ASCII-Hex
+
+PHYSICAL MEMORY PARAMETERS
+   Default data width   :   8
+   Default memory width :   8
+   Default output width :   8
+
+
+OUTPUT TRANSLATION MAP
+--------------------------------------------------------------------------------
+00000000..00003fff  Page=0  Memory Width=8  ROM Width=8  "FLASH"
+--------------------------------------------------------------------------------
+   OUTPUT FILES: flash_sine.hex [b0..b7]
+
+   CONTENTS: 00000000..000001ff   .vecs
+             00000200..0000025f   bootload
+             00000260..000003ff   FILL = 00000000
+             00000400..000026ff   .text
+             00002700..00002aff   FILL = 00000000
+             00002b00..00002de3   .cinit
+             00002de4..0000306b   FILL = 00000000
+             0000306c..000030cb   .const
+             000030cc..00003fff   FILL = 00000000

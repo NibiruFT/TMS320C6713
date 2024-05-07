@@ -1,0 +1,12 @@
+
+menuitem "G722 Items"
+
+slider On_Off(0,1,1,1,on_offselparameter)
+{
+        encoder_on = on_offselparameter;
+} 
+
+slider Buff_Capture(0,1,1,1,startbuffselparameter)
+{
+        start_buffer = startbuffselparameter;
+}

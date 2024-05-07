@@ -1,0 +1,7 @@
+------------------------------  EMIF.pjt - Debug  ------------------------------
+"C:\C6713\C6000\CGTOOLS\BIN\cl6x" -g -q -fr"C:/c6713/myprojects/EMIF/Debug" -d"CHIP_6713" -mv6710 -@"Debug.lkf" "EMIF.c"
+
+"C:\C6713\C6000\CGTOOLS\BIN\cl6x" -@"Debug.lkf"
+
+Build Complete,
+  0 Errors, 0 Warnings, 0 Remarks.

@@ -1,0 +1,46 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="C:\CCStudio_v3.1\myprojects\flash_sine\"
+ProjectType=Executable
+CPUFamily=TMS320C67XX
+Tool="Compiler"
+Tool="CustomBuilder"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="..\..\C6000\cgtools\lib\rts6700.lib"
+Source="..\..\C6000\csl\lib\csl6713.lib"
+Source="..\..\C6000\dsk6713\lib\dsk6713bsl.lib"
+Source="..\Support\c6713dskinit.c"
+Source="..\Support\Vectors_intr.asm"
+Source="flash_sine.c"
+Source="..\Support\C6713dsk.cmd"
+
+["Compiler" Settings: "Debug"]
+Options=-g -q -fr"C:\CCStudio_v3.1\myprojects\flash_sine\Debug" -i"c:\CCStudio_v3.1\C6000\dsk6713\include" -d"CHIP_6713" -mv6710 --mem_model:data=far
+
+["Compiler" Settings: "Release"]
+Options=-q -o3 -fr"C:\CCStudio_v3.1\myprojects\flash_sine\Release" -mv6700
+
+["DspBiosBuilder" Settings: "Debug"]
+Options=-v6x
+
+["DspBiosBuilder" Settings: "Release"]
+Options=-v6x
+
+["Linker" Settings: "Debug"]
+Options=-q -c -m".\Debug\flash_sine.map" -o".\Debug\flash_sine.out" -x -i"c:\CCStudio_v3.1\C6000\dsk6713\lib" -l"rts6700.lib" -l"dsk6713bsl.lib" -l"csl6713.lib"
+
+["Linker" Settings: "Release"]
+Options=-q -c -m".\Release\Flash_sine8.map" -o".\Release\Flash_sine8.out" -x
+
+["..\Support\C6713dsk.cmd" Settings: "Debug"]
+LinkOrder=1
+
+["..\Support\C6713dsk.cmd" Settings: "Release"]
+LinkOrder=1
+
