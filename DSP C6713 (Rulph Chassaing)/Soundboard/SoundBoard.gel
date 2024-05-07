@@ -1,0 +1,45 @@
+//Echo_control.gel Sliders vary time delay,amplitude,and type of echo
+
+menuitem "Echo Control"
+
+slider EAmp(0,35,1,1,amplitude_parameter) 
+  {
+   EchoAmplitude = amplitude_parameter;           
+  }
+slider Type(0,1,1,1,echo_typeparameter)      
+  {
+   echo_type = echo_typeparameter;           
+  }
+slider EMin(0,8000,500,500,E1_param)       
+  {
+   EchoMin= E1_param;            
+  }
+slider EMax(0,8000,500,500,E2_param)       
+  {
+   EchoMax= E2_param;           
+  }
+slider HAmp(0,32,1,1,harmampparam)      
+  {
+   HarmAmp= harmampparam;            
+  }
+slider H2amp(0,32,1,1,hampparam)       
+  {
+   SecHarmAmp= hampparam;           
+  }
+slider Dist(0,32,1,1,distortion)
+{
+	DistMag=distortion;
+}
+slider HDelay(0,3000,300,300,HarmDel)
+{
+	HarmLength=HarmDel;
+}
+slider Volume(0,100,1,1,Vol)
+{
+	VolSlider = Vol;
+}
+slider PreAmp(0,100,1,1,Vol1)
+{
+	PreAmp = Vol1;
+}
+
