@@ -1,0 +1,15 @@
+;Factclasmfunc.sa Linear ASM function called from C to find factorial
+      
+      	    .def	_factclasmfunc ;Linear ASM func called from C
+_factclasmfunc: .cproc	number	   ;start of linear ASM function
+		    .reg	a,b            ;asm optimizer directive
+		    mv	number,b       ;set-up loop count in b
+		    mv  	number,a       ;move number to a
+		    sub     b,1,b          ;decrement loop counter
+
+loop:		    mpy	a,b,a     	   ;n(n-1)
+		    sub	b,1,b          ;decrement loop counter  
+   [b] 	    b		loop       	   ;loop back to loop if count # 0
+		    .return	a              ;result to calling function
+		    .endproc               ;end of linear asm function
+				

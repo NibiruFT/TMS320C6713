@@ -1,0 +1,42 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="C:\c6713\myprojects\DTMF_Bios_FFT\"
+ProjectType=Executable
+CPUFamily=TMS320C67XX
+Tool="Compiler"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="c6713dskinit.c"
+Source="cfftr4_dif.c"
+Source="digit_rev.c"
+Source="DTMF_Bios_FFT.c"
+Source="DTMF_Bios_FFT.cdb"
+Source="DTMF_Bios_FFTcfg.cmd"
+
+[Generated Files]
+Source="DTMF_Bios_FFTcfg.s62"
+Source="DTMF_Bios_FFTcfg_c.c"
+
+["Compiler" Settings: "Debug"]
+Options=-g -q -fr"C:\c6713\myprojects\DTMF_Bios_FFT\Debug" -d"CHIP_6713" -mv6710
+
+["Compiler" Settings: "Release"]
+Options=-q -o3 -fr"C:\c6713\myprojects\DTMF_Bios_FFT\Release" -mv6700
+
+["DspBiosBuilder" Settings: "Debug"]
+Options=-v6x
+
+["DspBiosBuilder" Settings: "Release"]
+Options=-v6x
+
+["Linker" Settings: "Debug"]
+Options=-q -c -m".\Debug\DTMF_Bios_FFT.map" -o".\Debug\DTMF_Bios_FFT.out" -x -l"dsk6713bsl.lib"
+
+["Linker" Settings: "Release"]
+Options=-q -c -m".\Release\DTMF_Bios_FFT.map" -o".\Release\DTMF_Bios_FFT.out" -x
+

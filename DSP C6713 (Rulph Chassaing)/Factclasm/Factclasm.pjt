@@ -1,0 +1,36 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="C:\CCStudio_v3.1\MyProjects\Factclasm\"
+ProjectType=Executable
+CPUFamily=TMS320C67XX
+Tool="Compiler"
+Tool="CustomBuilder"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="Factclasm.c"
+Source="Factclasmfunc.sa"
+Source="..\Support\C6713dsk.cmd"
+
+["Compiler" Settings: "Debug"]
+Options=-g -q -fr"C:\CCStudio_v3.1\MyProjects\Factclasm\Debug" -d"_DEBUG" -mv6700
+
+["Compiler" Settings: "Release"]
+Options=-q -o3 -fr"C:\CCStudio_v3.1\MyProjects\Factclasm\Release" -mv6700
+
+["DspBiosBuilder" Settings: "Debug"]
+Options=-v6x
+
+["DspBiosBuilder" Settings: "Release"]
+Options=-v6x
+
+["Linker" Settings: "Debug"]
+Options=-q -c -m".\Debug\Factclasm.map" -o".\Debug\Factclasm.out" -x -l"rts6700.lib"
+
+["Linker" Settings: "Release"]
+Options=-q -c -m".\Release\Factclasm.map" -o".\Release\Factclasm.out" -x
+
