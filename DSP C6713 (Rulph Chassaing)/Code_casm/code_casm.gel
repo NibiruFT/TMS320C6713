@@ -1,0 +1,20 @@
+/*Code_casm.gel Sliders to chose the four digits to match code*/
+
+menuitem "Digit Select"
+
+slider Digit1(1,4,1,1,digit1_parameter) /*incr by 1,up to 4*/
+  	{
+       digit1 = digit1_parameter;	    /*vary 1st digit   */
+  	}
+slider Digit2(1,4,1,1,digit2_parameter) /*incr by 1,up to 4*/
+  	{
+       digit2 = digit2_parameter;	    /*vary 2nd digit   */
+  	}
+slider Digit3(1,4,1,1,digit3_parameter) /*incr by 1,up to 4*/
+  	{
+       digit3 = digit3_parameter;	    /*vary 3rd digit   */
+  	}
+slider Digit4(1,4,1,1,digit4_parameter) /*incr by 1,up to 4*/
+  	{
+       digit4 = digit4_parameter;	    /*vary 4th digit   */
+  	}
