@@ -1,0 +1,57 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: RtdxFFT - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/RtdxFFT.res" /d "_DEBUG" /d "_AFXDLL" "C:\c6713\myprojects\rtdx_vc_FFTr4\RtdxFFT\RtdxFFT.rc"" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPB302.TMP" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/RtdxFFT.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\c6713\myprojects\rtdx_vc_FFTr4\RtdxFFT\MatlabClass.cpp"
+"C:\c6713\myprojects\rtdx_vc_FFTr4\RtdxFFT\RtdxFFT.cpp"
+"C:\c6713\myprojects\rtdx_vc_FFTr4\RtdxFFT\RtdxFFTDlg.cpp"
+"C:\c6713\myprojects\rtdx_vc_FFTr4\RtdxFFT\rtdxint.cpp"
+"C:\c6713\myprojects\rtdx_vc_FFTr4\RtdxFFT\RTDXThread.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPB302.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPB303.TMP" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/RtdxFFT.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\c6713\myprojects\rtdx_vc_FFTr4\RtdxFFT\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPB303.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPB304.TMP" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/RtdxFFT.pdb" /debug /machine:I386 /out:"Debug/RtdxFFT.exe" /pdbtype:sept 
+.\Debug\MatlabClass.obj
+.\Debug\RtdxFFT.obj
+.\Debug\RtdxFFTDlg.obj
+.\Debug\rtdxint.obj
+.\Debug\RTDXThread.obj
+.\Debug\StdAfx.obj
+.\Debug\RtdxFFT.res
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPB304.TMP"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+MatlabClass.cpp
+RtdxFFT.cpp
+RtdxFFTDlg.cpp
+rtdxint.cpp
+RTDXThread.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+RtdxFFT.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
