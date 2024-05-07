@@ -1,0 +1,36 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="C:\c6713\myprojects\PSK\PLL\bpsk_demod\"
+ProjectType=Executable
+CPUFamily=TMS320C67XX
+Tool="Compiler"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="..\..\..\Support\c6713dskinit.c"
+Source="..\..\..\Support\Vectors_intr.asm"
+Source="bpsk demod.c"
+Source="..\..\..\Support\C6713dsk.cmd"
+
+["Compiler" Settings: "Debug"]
+Options=-g -q -fr"C:\c6713\myprojects\PSK\PLL\bpsk_demod\Debug" -d"CHIP_6713" -mv6700
+
+["Compiler" Settings: "Release"]
+Options=-q -o3 -fr"C:\c6713\myprojects\PSK\PLL\bpsk_demod\Release" -mv6700
+
+["DspBiosBuilder" Settings: "Debug"]
+Options=-v6x
+
+["DspBiosBuilder" Settings: "Release"]
+Options=-v6x
+
+["Linker" Settings: "Debug"]
+Options=-q -c -m".\Debug\bpsk_demod.map" -o".\Debug\bpsk_demod.out" -x -l"rts6700.lib" -l"dsk6713bsl.lib" -l"csl6713.lib"
+
+["Linker" Settings: "Release"]
+Options=-q -c -m".\Release\bpsk_demod.map" -o".\Release\bpsk_demod.out" -x
+

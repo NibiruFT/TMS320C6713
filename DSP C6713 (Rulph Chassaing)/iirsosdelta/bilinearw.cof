@@ -1,0 +1,8 @@
+// bilinearw.cof
+// second order type 1 Chebyshev LPF with 2dB passband ripple
+// pre-warped to have cutoff frequency 1500Hz
+
+#define NUM_SECTIONS 1
+
+float b[NUM_SECTIONS][3]={ {0.15325778, 0.30651556, 0.15325778} };
+float a[NUM_SECTIONS][2]={ {-0.66423178, 0.43599223} };

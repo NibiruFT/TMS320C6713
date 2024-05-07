@@ -1,0 +1,9 @@
+/*Switch.gel Sliders to switch between modulation and demodulation*/
+
+menuitem "Menu"
+
+slider mode(1,10,1,1,swt) 
+    {
+       mode = swt;	
+    }
+
