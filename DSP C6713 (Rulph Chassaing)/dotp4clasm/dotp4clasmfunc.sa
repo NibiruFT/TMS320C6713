@@ -1,0 +1,16 @@
+;Dotp4clasmfunc.sa  Linear assembly function to multiply two arrays
+		     .def	  _dotp4clasmfunc ;ASM func called from C
+_dotp4clasmfunc: .cproc	  ap,bp,count     ;start section linear asm
+	           .reg	  a,b,prod,sum    ;asm optimizer directive
+
+	     	     zero  	  sum   	      ;init sum of products	
+loop:	     	     ldh   	  *ap++,a         ;pointer to 1st array->a  
+	           ldh   	  *bp++,b	      ;pointer to 2nd array->b 	
+	           mpy   	  a,b,prod        ;product= a*b   
+                 add   	  prod,sum,sum    ;sum of products-->sum    
+	           sub   	  count,1,count   ;decrement counter  
+  [count]        b     	  loop            ;loop back if count # 0
+	
+		     .return  sum		      ;return sum as result
+		     .endproc 	            ;end linear asm function
+				
