@@ -1,0 +1,499 @@
+*===============================================================================
+*
+* From: https://www-a.ti.com/apps/c6000/xt_download.asp?sku=C67x_cfftr4
+*
+*	TEXAS INSTRUMENTS, INC.		
+*
+*	RADIX 4 FFT (DIF) with digit-reversed output
+*
+*	Revision Date:	04/09/98
+*	
+*	USAGE	This routine is C Callable and can be called as:
+*		
+*		void cfftr4_dif(float* x, float* w, short n)
+*
+*		x is pointer to an array holding the input and output floating
+*		   point array which contains 'n' complex points
+*		w is pointer to an array holding the coefficient floating point
+*		   array which contains 3*n/4 complex numbers
+*		n is the number of complex points in x
+*
+*		If the routine is not to be used as a C callable function,
+*		then you need to initialize values for all of the parameters
+*		passed to the function since these are assumed to be in
+*		registers as defined by the calling convention of the
+*		compiler, (refer to the TMS320C6x Optimizing C Compiler
+*		User's Guide).
+*
+*	C CODE
+*		This is the C equivalent for the assembly code.  Note that
+*		the assembly code is hand optimized and restrictions may
+*		apply.
+*
+*	void cfftr4_dif(float* x, float* w, short n)
+*	{
+*	    short n1, n2, ie, ia1, ia2, ia3, i0, i1, i2, i3, j, k;
+*	    float r1, r2, r3, r4, s1, s2, s3, s4, co1, co2, co3, si1, si2, si3;
+*
+*	    n2 = n;
+*	    ie = 1;
+*	    for(k=n; k>1; k>>=2)
+*	    {
+*	       n1 = n2;
+*	       n2 >>= 2;
+*	       ia1 = 0;
+*	       for(j=0; j<n2; j++)
+*	       {
+*		  ia2 = ia1 + ia1;
+*		  ia3 = ia1 + ia2;
+*		  co1 = w[ia1*2];
+*		  si1 = w[ia1*2+1];
+*		  co2 = w[ia2*2];
+*		  si2 = w[ia2*2+1];
+*		  co3 = w[ia3*2];
+*		  si3 = w[ia3*2+1];
+*		  ia1 += ie;
+*		  for(i0=j; i0<n; i0+=n1)
+*		  {
+*		     i1 = i0 + n2;
+*		     i2 = i1 + n2;
+*		     i3 = i2 + n2;
+*		     r1 = x[i0*2]   + x[i2*2];
+*		     r3 = x[i0*2]   - x[i2*2];
+*		     s1 = x[i0*2+1] + x[i2*2+1];
+*		     s3 = x[i0*2+1] - x[i2*2+1];
+*		     r2 = x[i1*2]   + x[i3*2];
+*		     r4 = x[i1*2]   - x[i3*2];
+*		     s2 = x[i1*2+1] + x[i3*2+1];
+*		     s4 = x[i1*2+1] - x[i3*2+1];
+*		     x[i0*2]   = r1 + r2;
+*		     r2        = r1 - r2;
+*		     r1        = r3 - s4;
+*		     r3        = r3 + s4;
+*		     x[i0*2+1] = s1 + s2;
+*		     s2        = s1 - s2;
+*		     s1        = s3 + r4;
+*		     s3        = s3 - r4;
+*		     x[i1*2]   = co1*r3 + si1*s3;
+*		     x[i1*2+1] = co1*s3 - si1*r3;
+*		     x[i2*2]   = co2*r2 + si2*s2;
+*		     x[i2*2+1] = co2*s2 - si2*r2;
+*		     x[i3*2]   = co3*r1 + si3*s1;
+*		     x[i3*2+1] = co3*s1 - si3*r1;
+*		  }
+*	       }
+*	       ie <<= 2;
+*	    }
+*	}
+*
+*	DESCRIPTION
+*
+*		This routine implements the DIF (decimation in frequency)
+*		complex radix 4 FFT with digit-reversed output and normal
+*		order input.  The number of points, 'n', must be a power
+*		of 4 {4, 16, 64, 256, 1024, ...}.  This routine is an
+*		in-place routine in the sense that the output is written
+*		over the input.  It is not an in-place routine in the
+*		sense that the input is in normal order and the output is
+*		in digit-reversed order.
+*
+*		There must be n complex points (2*n values), and 3*n/4 complex
+*		coefficients (3*n/2 values).
+*
+*		Each real and imaginary input value is interleaved in the
+*		'x' array {rx0, ix0, rx1, ix2, ...} and the complex numbers
+*		are in normal order.  Each real and imaginary output value
+*		is interleaved in the 'x' array and the complex numbers are
+*		in digit-reversed  order {rx0, ix0, ...}.  The real and
+*		imaginary values of the coefficients are interleaved in the
+*		'w' array {rw0, -iw0, rw1, -iw1, ...} and the complex numbers
+*		are in normal order.
+*
+*		Note that the imaginary coefficients are negated
+*		{cos(d*0),  sin(d*0),  cos(d*1),   sin(d*1), ...} rather than
+*		{cos(d*0), -sin(d*0),  cos(d*1),  -sin(d*1), ...}
+*		where d = 2*PI/n.  The value of w(n,k) is usually written
+*		w(n,k) = e^-j(2*PI*k/n) = cos(2*PI*k/n) - sin(2*PI*k/n).
+*
+*		The routine can be used to implement an inverse FFT by
+*		performing the complex conjugate on the input complex numbers
+*		(negating the imaginary value), and dividing the result by n.
+*		Another method to use the FFT to perform an inverse FFT, is to
+*		swap the real and imaginary values of the input and the result,
+*		and divide the result by n.  In either case, the input is still
+*		in normal order and the output is still in digit-reversed order.
+*
+*		Note that you can not make the radix 4 FFT into an inverse
+*		FFT by using the complex conjugate of the coefficients as
+*		you can do with the complex radix 2 FFT.
+*
+*		If you label the input locations from 0 to (n-1) (normal order),
+*		the digit-reversed locations can be calculated by reversing the
+*		order of the bit pairs of the labels.  For example, for a 1024
+*		point FFT, the digit reversed location for
+*		617d = 1001101001b = 10 01 10 10 01  is
+*		422d = 0110100110b = 01 10 10 01 10  and visa versa.
+*
+*		TI plans to provide an inverse complex radix 4 FFT with digit-
+*		reversed input and normal order output.  With these 2 routines,
+*		the digit-reversed output of the FFT can be the input to the
+*		inverse FFT without performing digit-reversing on the data.
+*
+*		TI also plans to provide a complex digit reverse routine.
+*
+*	TECHNIQUES
+*
+*		1.  The two inner loops are executed as one loop with
+*		    conditional instructions.  The variable 'wcntr' is used
+*		    to determine when the load pointers and coefficient
+*		    offsets need to be reset.
+*		2.  The first 8 cycles of the inner loop prolog are
+*		    conditionally scheduled in parallel with the outer loop.
+*		    This increases the code size by 12 words, but
+*		    improves the cycle time.
+*		3.  A load counter, lcntr, is used so that extraneous loads
+*		    are not performed.
+*		4.  If more registers were available, the inner loop could
+*		    probably be as small as 11 cycles (22 ADDSP/SUBSP
+*		    instructions).  The inner loop was extended to 14 cycles
+*		    to allow more variables to share registers and thus
+*		    only need 32 registers.
+*		5.  A local stack is used so that a SP is not needed.
+*		6.  The store variable, scntr, is used to determine when
+*		    the store pointer needs to be reset.
+*		7.  The variable, n2b, is used as the outer loop counter.
+*		    We are finished when n2b = 0.
+*		8.  LDDW instructions are not used so that the real and
+*		    imaginary values can be loaded to separate register files
+*		    and so that the load and store pointers can use the
+*		    same offset, n2.
+*		9.  The outer loop resets the inner loop count to 'n' by
+*		    multiplying 'ie' by 'n2b' which is equivalent to
+*		    'ie' multiplied by 'n2' which is always 'n'.  The
+*		    product is always the same since the outer loop shifts
+*		    'n2' to the right by 2 and shifts 'ie' to the left by 2.
+*
+*	REGISTER ALLOCATIONS
+*
+*	A0  n2				B0  n2b
+*	A1  wcntr			B1  scntr
+*	A2  lcntr			B2  icntr
+*	A3  i1				B3  i1b
+*	A4  ptr_x0			B4  ptr_x1
+*	A5  ptr_y0			B5  ptr_y1
+*	A6  ptr_w0			B6  ptr_w1
+*	A7  ie				B7  reset
+*	A8  rx0, s4, p3_2		B8  ix0, r4, p2_2
+*	A9  rx2, r3, rx3		B9  ix2, s3, iy3
+*	A10 ix3, co1, p3_3, reset_a	B10 rx3, si1, p2_3
+*	A11 r1, r1a, r2a, p0_1, p0_2	B11 s1, s1a, s2a, p1_1, p1_2
+*	A12 r2, co3, p0_3		B12 s2, si3, p1_3
+*	A13 r3a, co2, tmp		B13 s3a, si2
+*	A14 p3_1, ry0, ry2		B14 p2_1, iy0, iy2
+*	A15 rx1, ry1			B15 ix1, iy1
+*	
+*	ASSUMPTIONS
+*
+*		1.  Since single assignment of registers is not used,
+*		    interrupts should be disabled before this function is 
+*                   called.
+*		
+*	MEMORY NOTE
+*
+*		No internal bank hits will occur regardless of were parameters
+*		are placed in internal memory.	No extraneous loads are
+*		performed.
+*
+*       ARGUMENTS PASSED
+*
+*		x	 ->  A4 = ptr_x0
+*		w	 ->  B4
+*		n	 ->  A6
+*
+*	CYCLES
+*
+*		(14*n/4 + 23)*(log4(n)) + 20	   with C overhead
+*
+*	NOTATIONS
+*
+*		f = Function Prolog or Epilog
+*		o = Outer Loop
+*		p = Inner Loop Prolog
+*
+*===============================================================================
+	.global _cfftr4_dif
+	.bss	stack, 52
+	.text
+_cfftr4_dif:
+*** BEGIN Benchmark Timing ***
+B_START:
+
+	ZERO	.D1	A3		; i1 = 0
+||	ADD	.D2	B4, 4, B6	; ptr_w1 = w + 4
+||	SHR	.S2X	A6, 1, B0	; n2b = n >> 1
+||	MVK	.S1	stack, A9	; f A9 = ptr_stack
+
+	MV	.D1	A4, A5		; ptr_y0 = ptr_x0
+||	MV	.L1X	B0, A0		; n2 = n2b
+||	MV	.L2X	A6, B2		; icntr = n
+||	MVKH	.S1	stack, A9	; f A9 = ptr_stack
+
+	MV	.L2X	A9, B9		; B9 = A9
+||	MVK	.S1	2, A7		; ie = 2
+||	SHL	.S2	B2, 3, B1	; B1 = B2 << 3
+||	STW	.D1	B3, *A9 	; f push B3
+
+	MV	.L1	A7, A1		; wcntr = ie
+||	ADD	.L2X	A4, 4, B4	; ptr_x1 = ptr_x0 + 4
+||	SUB	.S2	B1, 8, B7	; reset = B1 - 8
+||	STW	.D1	A10, *+A9[11]	; f push A10
+||	STW	.D2	B10, *+B9[12]	; f push B10
+
+	SUB	.L1X	B6, 4, A6	; ptr_w0 = ptr_w1 - 4
+||	MV	.L2X	A7, B1		; scntr = ie
+||	MV	.S2	B4, B5		; ptr_y1 = ptr_x1
+||	STW	.D1	A15, *+A9[1]	; f push A15
+||	STW	.D2	B15, *+B9[2]	; f push B15
+* Prolog Begins ****************************************************************
+	LDW	.D1	*A4++[A0], A8	; load rx0
+||	LDW	.D2	*B4++[B0], B8	; load ix0
+||	MV	.S1	A9, A10 	; f A10 = A9
+||	MV	.S2	B9, B10 	; f B10 = B9
+
+	LDW	.D1	*A4++[A0], A15	; load rx1
+||	LDW	.D2	*B4++[B0], B15	; load ix1
+
+	LDW	.D1	*A4++[A0], A9	; load rx2
+||	LDW	.D2	*B4++[B0], B9	; load ix2
+||	MV	.S2X	A3, B3		; i1b = i1
+
+	LDW	.D1	*A4++[A0], B10	; load rx3
+||	LDW	.D2	*B4++[B0], A10	; load ix3
+||	SUB	.S1	A1, 2, A1	; if(wcntr) wcntr -= 2
+
+  [!A1] SUB	.S1X	A4, B7, A4	; if(!wcntr) ptr_x0 -= reset
+||[!A1] SUB	.S2	B4, B7, B4	; if(!wcntr) ptr_x1 -= reset
+||	STW	.D1	A14, *+A10[3]	; f push A14
+||	STW	.D2	B14, *+B10[4]	; f push B14
+
+	STW	.D1	A13, *+A10[5]	; f push A13
+||	STW	.D2	B13, *+B10[6]	; f push B13
+
+	STW	.D1	A12, *+A10[7]	; f push A12
+||	STW	.D2	B12, *+B10[8]	; f push B12
+
+	SUBSP	.L1	A8, A9, A9	; r3 = rx0 - rx2
+||	SUBSP	.L2	B8, B9, B9	; s3 = ix0 - ix2
+||	STW	.D1	A11, *+A10[9]	; f push A11
+||	STW	.D2	B11, *+B10[10]	; f push B11
+
+OLOOP:
+	SUBSP	.L1X	B15, A10, A8	; s4 = ix1 - ix3
+||	SUBSP	.L2X	A15, B10, B8	; r4 = rx1 - rx3
+
+	SUB	.S1X	B2, 4, A2	; lcntr = icntr - 4
+
+	ADDSP	.L1	A8, A9, A11	; r1 = rx0 + rx2
+||	ADDSP	.L2	B8, B9, B11	; s1 = ix0 + ix2
+
+	LDW	.D1	*++A6[A3], A10	; load co1
+||	LDW	.D2	*++B6[B3], B10	; load si1
+
+	LDW	.D1	*++A6[A3], A13	; load co2
+||	LDW	.D2	*++B6[B3], B13	; load si2
+||	ADDSP	.L1X	A15, B10, A12	; r2 = rx1 + rx3
+||	ADDSP	.L2X	B15, A10, B12	; s2 = ix1 + ix3
+
+	LDW	.D1	*+A6[A3], A12	; load co3
+||	LDW	.D2	*+B6[B3], B12	; load si3
+||	SHL	.S1	A3, 3, A13	; tmp = i1 << 3
+
+   [A2] LDW	.D1	*A4++[A0], A8	; @ if(lcntr) load rx0
+|| [A2] LDW	.D2	*B4++[B0], B8	; @ if(lcntr) load ix0
+||	ADDSP	.L1	A9, A8, A11	; r1a = r3 + s4
+||	SUBSP	.L2	B9, B8, B11	; s1a = s3 - r4
+||	SUB	.S1	A6, A13, A6	; ptr_w0 -= tmp
+||	SUB	.S2X	B6, A13, B6	; ptr_w1 -= tmp
+
+   [A2] LDW	.D1	*A4++[A0], A15	; @ if(lcntr) load rx1
+|| [A2] LDW	.D2	*B4++[B0], B15	; @ if(lcntr) load ix1
+||[!A1] ADD	.S1	A3, A7, A3	; if(!wcntr) i1 += ie
+
+   [A2] LDW	.D1	*A4++[A0], A9	; @ if(lcntr) load rx2
+|| [A2] LDW	.D2	*B4++[B0], B9	; @ if(lcntr) load ix2
+||	SUBSP	.L1	A11, A12, A11	; r2a = r1 - r2
+||	SUBSP	.L2	B11, B12, B11	; s2a = s1 - s2
+||[!A1] MV	.S1	A7, A1		; if(!wcntr) wcntr = ie
+||	MV	.S2X	A3, B3		; @ i1b = i1
+
+   [A2] LDW	.D1	*A4++[A0], B10	; @ if(lcntr) load rx3
+|| [A2] LDW	.D2	*B4++[B0], A10	; @ if(lcntr) load ix3
+||	ADDSP	.L1	A11, A12, A14	; ry0 = r1 + r2
+||	ADDSP	.L2	B11, B12, B14	; iy0 = s1 + s2
+|| [A1] SUB	.S1	A1, 2, A1	; @ if(wcntr) wcntr -= 2
+
+	SUBSP	.L1	A9, A8, A13	; r3a = r3 - s4
+||	ADDSP	.L2	B9, B8, B13	; s3a = s3 + r4
+||	MPYSP	.M1	A11, A10, A11	; p0_1 = r1a * co1
+||	MPYSP	.M2	B11, B10, B11	; p1_1 = s1a * si1
+||[!A1] SUB	.S1X	A4, B7, A4	; @ if(!wcntr) ptr_x0 -= reset
+||[!A1] SUB	.S2	B4, B7, B4	; @ if(!wcntr) ptr_x1 -= reset
+
+	MPYSP	.M1X	A11, B10, A14	; p3_1 = r1a * si1
+||	MPYSP	.M2X	B11, A10, B14	; p2_1 = s1a * co1
+
+	MPYSP	.M1	A11, A13, A11	; p0_2 = r2a * co2
+||	MPYSP	.M2	B11, B13, B11	; p1_2 = s2a * si2
+**** Loop Begins ***************************************************************
+LOOP:
+	SUBSP	.L1	A8, A9, A9	; @ r3 = rx0 - rx2
+||	SUBSP	.L2	B8, B9, B9	; @ s3 = ix0 - ix2
+||	MPYSP	.M1X	A11, B13, A8	; p3_2 = r2a * si2
+||	MPYSP	.M2X	B11, A13, B8	; p2_2 = s2a * co2
+||[!B1] SUB	.S1	A5, A10, A5	; if(!scntr) ptr_y0 -= reset_a
+||[!B1] SUB	.S2	B5, B7 , B5	; if(!scntr) ptr_y1 -= reset
+
+	SUBSP	.L1X	B15, A10, A8	; @ s4 = ix1 - ix3
+||	SUBSP	.L2X	A15, B10, B8	; @ r4 = rx1 - rx3
+||	MPYSP	.M1	A13, A12, A12	; p0_3 = r3a * co3
+||	MPYSP	.M2	B13, B12, B12	; p1_3 = s3a * si3
+||	STW	.D1	A14, *A5++[A0]	; store ry0
+||	STW	.D2	B14, *B5++[B0]	; store iy0
+
+	ADDSP	.L1X	A11, B11, A15	; ry1 = p0_1 + p1_1
+||	SUBSP	.L2X	B14, A14, B15	; iy1 = p2_1 - p3_1
+|| [A2] SUB	.S1	A2, 4, A2	; if(lcntr) lcntr -= 4
+
+	ADDSP	.L1	A8, A9, A11	; @ r1 = rx0 + rx2
+||	ADDSP	.L2	B8, B9, B11	; @ s1 = ix0 + ix2
+||	MPYSP	.M1X	A13, B12, A10	; p3_3 = r3a * si3
+||	MPYSP	.M2X	B13, A12, B10	; p2_3 = s3a * co3
+
+	LDW	.D1	*++A6[A3], A10	; @ load co1
+||	LDW	.D2	*++B6[B3], B10	; @ load si1
+||	ADDSP	.L1X	A11, B11, A14	; ry2 = p0_2 + p1_2
+||	SUBSP	.L2X	B8 , A8 , B14	; iy2 = p2_2 - p3_2
+
+	LDW	.D1	*++A6[A3], A13	; @ load co2
+||	LDW	.D2	*++B6[B3], B13	; @ load si2
+||	ADDSP	.L1X	A15, B10, A12	; @ r2 = rx1 + rx3
+||	ADDSP	.L2X	B15, A10, B12	; @ s2 = ix1 + ix3
+|| [B2] SUB	.S2	B2, 4, B2	; if(icntr) icntr -= 4
+
+	LDW	.D1	*+A6[A3], A12	; @ load co3
+||	LDW	.D2	*+B6[B3], B12	; @ load si3
+||[!B1] MV	.S2X	A7, B1		; if(!scntr) scntr = ie
+||	SHL	.S1	A3, 3, A13	; @ tmp = i1 << 3
+
+   [A2] LDW	.D1	*A4++[A0], A8	; @@ if(lcntr) load rx0
+|| [A2] LDW	.D2	*B4++[B0], B8	; @@ if(lcntr) load ix0
+||	ADDSP	.L1	A9, A8, A11	; @ r1a = r3 + s4
+||	SUBSP	.L2	B9, B8, B11	; @ s1a = s3 - r4
+||	SUB	.S1	A6, A13, A6	; @ ptr_w0 -= tmp
+||	SUB	.S2X	B6, A13, B6	; @ ptr_w1 -= tmp
+
+   [A2] LDW	.D1	*A4++[A0], A15	; @@ if(lcntr) load rx1
+|| [A2] LDW	.D2	*B4++[B0], B15	; @@ if(lcntr) load ix1
+||	ADDSP	.L1X	A12, B12, A9	; ry3 = p0_3 + p1_3
+||	SUBSP	.L2X	B10, A10, B9	; iy3 = p2_3 - p3_3
+||[!A1] ADD	.S1	A3, A7, A3	; @ if(!wcntr) i1 += ie
+|| [B2] B	.S2	LOOP		; if(icntr) branch to LOOP
+
+   [A2] LDW	.D1	*A4++[A0], A9	; @@ if(lcntr) load rx2
+|| [A2] LDW	.D2	*B4++[B0], B9	; @@ if(lcntr) load ix2
+||	SUBSP	.L1	A11, A12, A11	; @ r2a = r1 - r2
+||	SUBSP	.L2	B11, B12, B11	; @ s2a = s1 - s2
+||[!A1] MV	.S1	A7, A1		; @ if(!wcntr) wcntr = ie
+||	MV	.S2X	A3, B3		; @@ i1b = i1
+
+   [A2] LDW	.D1	*A4++[A0], B10	; @@ if(lcntr) load rx3
+|| [A2] LDW	.D2	*B4++[B0], A10	; @@ if(lcntr) load ix3
+||	ADDSP	.L1	A11, A12, A14	; @ ry0 = r1 + r2
+||	ADDSP	.L2	B11, B12, B14	; @ iy0 = s1 + s2
+|| [A1] SUB	.S1	A1, 2, A1	; @@ if(wcntr) wcntr -= 2
+
+	SUBSP	.L1	A9, A8, A13	; @ r3a = r3 - s4
+||	ADDSP	.L2	B9, B8, B13	; @ s3a = s3 + r4
+||	MPYSP	.M1	A11, A10, A11	; @ p0_1 = r1a * co1
+||	MPYSP	.M2	B11, B10, B11	; @ p1_1 = s1a * si1
+||	STW	.D1	A15, *A5++[A0]	; store ry1
+||	STW	.D2	B15, *B5++[B0]	; store iy1
+||[!A1] SUB	.S1X	A4, B7, A4	; @@ if(!wcntr) ptr_x0 -= reset
+||[!A1] SUB	.S2	B4, B7, B4	; @@ if(!wcntr) ptr_x1 -= reset
+
+	MPYSP	.M1X	A11, B10, A14	; @ p3_1 = r1a * si1
+||	MPYSP	.M2X	B11, A10, B14	; @ p2_1 = s1a * co1
+||	STW	.D1	A14, *A5++[A0]	; store ry2
+||	STW	.D2	B14, *B5++[B0]	; store iy2
+
+	MPYSP	.M1	A11, A13, A11	; @ p0_2 = r2a * co2
+||	MPYSP	.M2	B11, B13, B11	; @ p1_2 = s2a * si2
+||	STW	.D1	A9, *A5++[A0]	; store ry3
+||	STW	.D2	B9, *B5++[B0]	; store iy3
+|| [B1] SUB	.S2	B1, 2, B1	; if(scntr) scntr -= 2
+||	MV	.S1X	B7, A10 	; reset_a = reset
+**** Loop Ends *****************************************************************
+	SHL	.S1	A0, 2, A3	; o A3 = n2 << 2
+||	SHR	.S2	B0, 2, B0	; o n2b >> 2
+||	SUB	.D1	A5, A10, A5	; o ptr_y0 -= reset_a
+||	SUB	.D2	B5, B7 , B5	; o ptr_y1 -= reset
+
+   [B0] SUB	.D1	A5, A3, A4	; o if(n2b)    ptr_x0 = ptr_y0 - A3
+|| [B0] SUB	.S2X	B5, A3, B4	; o if(n2b)    ptr_x1 = ptr_y1 - A3
+|| [B0] MV	.S1X	B0, A0		; o if(n2b)    n2 = n2b
+|| [B0] ZERO	.D2	B3		; o if(n2b)    i1b = 0
+
+   [B0] MV	.L1	A4, A5		; o if(n2b)    ptr_y0 = ptr_x0
+|| [B0] MV	.L2	B4, B5		; o if(n2b)    ptr_y1 = ptr_x1
+|| [B0] SHL	.S1	A7, 2, A7	; o if(n2b)    ie << 2
+|| [B0] LDW	.D1	*A4++[A0], A8	; p if(n2b)    load rx0
+|| [B0] LDW	.D2	*B4++[B0], B8	; p if(n2b)    load ix0
+
+   [B0] MV	.S2X	A7, B1		; o if(n2b)    scntr = ie
+|| [B0] ZERO	.S1	A3		; o if(n2b)    i1 = 0
+|| [B0] MV	.L1	A7, A1		; o if(n2b)    wcntr = ie
+|| [B0] LDW	.D1	*A4++[A0], A15	; p if(n2b)    load rx1
+|| [B0] LDW	.D2	*B4++[B0], B15	; p if(n2b)    load ix1
+
+   [B0] MPY	.M2X	A7, B0, B2	; o if(n2b)    icntr = ie * n2b = n
+|| [B0] B	.S1	OLOOP		; o if(n2b)    branch to OLOOP
+|| [B0] LDW	.D1	*A4++[A0], A9	; p if(n2b)    load rx2
+|| [B0] LDW	.D2	*B4++[B0], B9	; p if(n2b)    load ix2
+||[!B0] MVK	.S2	stack, B6	; f if(!n2b)   B6 = ptr_stack
+
+   [B0] LDW	.D1	*A4++[A0], B10	; p if(n2b)    load rx3
+|| [B0] LDW	.D2	*B4++[B0], A10	; p if(n2b)    load ix3
+|| [B0] SUB	.S1	A1, 2, A1	; p if(wcntr)  wcntr -= 2
+||[!B0] MVKH	.S2	stack, B6	; f if(!n2b)   B6 = ptr_stack
+
+  [!B0] LDW	.D2	*B6, B3 	; f if(!n2b)   pop B3
+||[!B0] MV	.L1	B6, A6		; f if(!n2b)   A6 = B6
+
+  [!B0] LDW	.D1	*+A6[1], A15	; f if(!n2b)   pop A15
+||[!B0] LDW	.D2	*+B6[2], B15	; f if(!n2b)   pop B15
+||[!A1] SUB	.S1X	A4, B7, A4	; p if(!wcntr) ptr_x0 -= reset
+||[!A1] SUB	.S2	B4, B7, B4	; p if(!wcntr) ptr_x1 -= reset
+
+  [!B0] LDW	.D1	*+A6[3], A14	; f if(!n2b)   pop A14
+||[!B0] LDW	.D2	*+B6[4], B14	; f if(!n2b)   pop B14
+
+   [B0] SUBSP	.L1	A8, A9, A9	; p if(n2b)    r3 = rx0 - rx2
+|| [B0] SUBSP	.L2	B8, B9, B9	; p if(n2b)    s3 = ix0 - ix2
+||[!B0] LDW	.D1	*+A6[5], A13	; f if(!n2b)   pop A13
+||[!B0] LDW	.D2	*+B6[6], B13	; f if(!n2b)   pop B13
+* Outer Loop Ends **************************************************************
+	LDW	.D1	*+A6[7], A12	; f pop A12
+||	LDW	.D2	*+B6[8], B12	; f pop B12
+
+	LDW	.D1	*+A6[9], A11	; f pop A11
+||	LDW	.D2	*+B6[10], B11	; f pop B11
+||	B	.S2	B3		; f return
+
+	LDW	.D1	*+A6[11], A10	; f pop A10
+||	LDW	.D2	*+B6[12], B10	; f pop B10
+
+	NOP		4		; f wait for return and LDWs
+
+B_END:
+*** END Benchmark Timing ***
+
