@@ -21,6 +21,4 @@ The [Code Composer Studio](https://community.element14.com/products/devtools/tec
 
 [DSP C6713 by Rulph Chassaing](http://firasaboulatif.free.fr/index_files/gaidaa%20book/Digital%20Signal%20Processing/Wiley%20-%20Digital%20Signal%20Processing%20and%20Applications%20with%20the%20C6713%20and%20C6416%20DSK.pdf) is a tutorial book on digital techniques for waveform generation, digital filters, and digital signal processing tools and techniques. The typical chapter begins with some theoretical material followed by working examples and experiments using the TMS320C6713-based DSPStarter Kit (DSK).
 
-> This book have an accompanying CD-ROM that contains all the programs discussed in the book.
->
-> Examples files attached in the CD-ROM can be found [here](https://github.com/NibiruFT/TMS320C6713/tree/main/DSP%20C6713%20(Rulph%20Chassaing))
+> This book have an accompanying CD-ROM that contains all the programs discussed in the book. Examples files attached in the CD-ROM can be found [here](https://github.com/NibiruFT/TMS320C6713/tree/main/DSP%20C6713%20(Rulph%20Chassaing)).
