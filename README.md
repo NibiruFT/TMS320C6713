@@ -1,5 +1,11 @@
 # TMS320C6713
 
+<p align="center">
+        <img src="https://mma.prnewswire.com/media/632577/TEXAS_INSTRUMENTS_INCORPORATED_Logo.jpg?p=facebook"
+             width="800" height="300" "> 
+    </a>
+</p>
+
 The TI’s [TMS320C6713 DSP Starter Kit](https://www.ti.com/tool/TMDSDSK6713?utm_source=google&utm_medium=cpc&utm_campaign=epd-pro-null-44700045336317896_prodfolderdynamic-cpc-pf-google-wwe_int&utm_content=prodfolddynamic&ds_k=DYNAMIC+SEARCH+ADS&DCM=yes&gad_source=1&gclid=Cj0KCQjwiYOxBhC5ARIsAIvdH53n28aNCoVE2ZOj320liwUfzcW4QVjyPzdt2Vdv1RH4B3XFc7M_Uw0aAtKNEALw_wcB&gclsrc=aw.ds) (DSK), developed jointly with Spectrum Digital, is a low-cost development platform designed to speed the development of high precision applications based on TI´s TMS320C6000 floating point DSP generation. It is designed and optimized to perform digital signal processing operations. 
 
 The DSK comes with a full compliment of [on-board devices](https://image.slideserve.com/745747/tms320c6713-dsk-block-diagram-l.jpg) that suit a wide variety of application environments.
